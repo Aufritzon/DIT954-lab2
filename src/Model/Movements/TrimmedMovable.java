@@ -1,12 +1,13 @@
-import java.awt.*;
+package Model.Movements;
 
-public class Volvo240 extends Car{
 
+import Model.Base.CarMovable;
+
+public class TrimmedMovable extends CarMovable {
     public final static double trimFactor = 1.25;
 
-
-    public Volvo240(int nrDoors, double enginePower, Color color, String modelName){
-        super(nrDoors, enginePower, 0, color, modelName);
+    public TrimmedMovable(double currentSpeed, double enginePower, double x, double y) {
+        super(currentSpeed, enginePower, x, y);
     }
 
     @Override
@@ -24,6 +25,7 @@ public class Volvo240 extends Car{
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
 
+    /*
     // TODO fix this method according to lab pm
     public void gas(double amount){
         incrementSpeed(amount);
@@ -33,4 +35,5 @@ public class Volvo240 extends Car{
     public void brake(double amount){
         decrementSpeed(amount);
     }
+*/
 }

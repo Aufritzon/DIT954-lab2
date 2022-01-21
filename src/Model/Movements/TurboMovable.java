@@ -1,11 +1,12 @@
-import java.awt.*;
+package Model.Movements;
 
-public class Saab95 extends Car{
+import Model.Base.CarMovable;
 
-    public boolean turboOn;
+public class TurboMovable extends CarMovable {
+    private boolean turboOn;
 
-    public Saab95 (int doors, double engPow, Color color, String modelName){
-        super(doors, engPow, 0, color, modelName);
+    public TurboMovable(double currentSpeed, double enginePower, double x, double y) {
+        super(currentSpeed, enginePower, x, y);
     }
 
     public void setTurboOn(){
@@ -34,12 +35,15 @@ public class Saab95 extends Car{
     }
 
     // TODO fix this method according to lab pm
+/*
     public void gas(double amount){
         incrementSpeed(amount);
     }
-
+*/
+/*
     // TODO fix this method according to lab pm
     public void brake(double amount){
         decrementSpeed(amount);
     }
+*/
 }
