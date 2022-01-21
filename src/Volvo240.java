@@ -2,13 +2,56 @@ package src;
 
 import java.awt.*;
 
-public class Volvo240 extends Car{
+public class Volvo240 extends Car implements Movable{
 
     public final static double trimFactor = 1.25;
 
+    //random start position
+    private int x = 150;
+    private int y = 150;
+    private int dir; //kanske bättre att låta positionerna och direction finnas i Car, mindre kod duplicering
 
-    public Volvo240(int nrDoors, double enginePower, Color color, String modelName){
+    //direction represented by integers
+    public static final int NORTH = 0;
+    public static final int SOUTH = 1;
+    public static final int EAST = 2;
+    public static final int WEST = 3;
+
+
+    public Volvo240(int nrDoors, double enginePower, Color color, String modelName, int dir){
         super(nrDoors, enginePower, 0, color, modelName);
+        this.dir = dir;
+    }
+
+    //Moves the car in the direction it is currently facing with currentSpeed
+    @Override
+    public void move() {
+        switch (dir) {
+            case NORTH -> y -= getCurrentSpeed();
+            case SOUTH -> y += getCurrentSpeed();
+            case EAST -> x += getCurrentSpeed();
+            case WEST -> x -= getCurrentSpeed();
+        }
+    }
+
+    @Override
+    public void turnLeft() {
+        switch (dir) {
+            case NORTH -> dir = WEST;
+            case SOUTH -> dir = EAST;
+            case EAST -> dir = NORTH;
+            case WEST -> dir = SOUTH;
+        }
+    }
+
+    @Override
+    public void turnRight() {
+        switch (dir) {
+            case NORTH -> dir = EAST;
+            case SOUTH -> dir = WEST;
+            case EAST -> dir = SOUTH;
+            case WEST -> dir = NORTH;
+        }
     }
 
     @Override
