@@ -1,4 +1,7 @@
+package src;
 import java.awt.*;
+import java.lang.System.*;
+import java.util.Random;
 
 public abstract class Car {
 
