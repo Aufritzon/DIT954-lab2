@@ -1,7 +1,6 @@
 package Model.Base;
 
-public interface Movable {
-    IPosition getPosition();
+public interface Movable extends Positionable{
     void move();
     void turnLeft();
     void turnRight();

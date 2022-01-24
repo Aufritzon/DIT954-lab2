@@ -1,6 +1,6 @@
 package Model.Base;
 
-public interface IPosition {
+public interface Positionable {
 
     public double getX();
 

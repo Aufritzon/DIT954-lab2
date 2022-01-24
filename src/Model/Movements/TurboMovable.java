@@ -5,8 +5,8 @@ import Model.Base.CarMovable;
 public class TurboMovable extends CarMovable {
     private boolean turboOn;
 
-    public TurboMovable(double currentSpeed, double enginePower, double x, double y) {
-        super(currentSpeed, enginePower, x, y);
+    public TurboMovable(double currentSpeed, double enginePower, double x, double y, Direction dir) {
+        super(currentSpeed, enginePower, x, y, dir);
     }
 
     public void setTurboOn(){

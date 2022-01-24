@@ -2,14 +2,14 @@ package Model.Base;
 
 import java.awt.*;
 
-public class Car {
+public abstract class Car {
 
     private final int nrDoors; // Number of doors on the car
     private Color color; // Color of the car
     private final String modelName; // The car model name
-    private Movable movable;
+    private CarMovable movable;
 
-    public Car (int nrDoors, Color color, String modelName, Movable movable){
+    public Car (int nrDoors, Color color, String modelName, CarMovable movable){
         this.nrDoors = nrDoors;
         this.color = color;
         this.modelName = modelName;

@@ -6,8 +6,8 @@ import Model.Base.CarMovable;
 public class TrimmedMovable extends CarMovable {
     public final static double trimFactor = 1.25;
 
-    public TrimmedMovable(double currentSpeed, double enginePower, double x, double y) {
-        super(currentSpeed, enginePower, x, y);
+    public TrimmedMovable(double currentSpeed, double enginePower, double x, double y, Direction dir) {
+        super(currentSpeed, enginePower, x, y, dir);
     }
 
     @Override
