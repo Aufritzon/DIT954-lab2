@@ -2,11 +2,7 @@ package testTrimmedEngine;
 
 
 import Model.Base.Car;
-import Model.Base.CarMovable;
-import Model.Base.TrimmedEngine;
-import Model.Cars.Saab95;
 import Model.Cars.Volvo240;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
