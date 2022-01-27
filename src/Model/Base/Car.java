@@ -2,18 +2,19 @@ package Model.Base;
 
 import java.awt.*;
 
-public abstract class Car {
+public abstract class Car extends CarMovable {
 
     private final int nrDoors; // Number of doors on the car
     private Color color; // Color of the car
     private final String modelName; // The car model name
-    private CarMovable movable;
+    public final Engine engine;
 
-    public Car (int nrDoors, Color color, String modelName, CarMovable movable){
+    public Car (double x, double y, Direction dir, int nrDoors, Color color, String modelName, Engine engine){
+        super(x, y, dir);
         this.nrDoors = nrDoors;
         this.color = color;
         this.modelName = modelName;
-        this.movable = movable;
+        this.engine = engine;
     }
 
     public int getNrDoors(){
@@ -31,4 +32,20 @@ public abstract class Car {
     public String getModelName() {
         return modelName;
     }
+
+    //Moves the car in the direction it is currently facing with currentSpeed
+    @Override
+    public void move() {
+        move(engine.getCurrentSpeed());
+    }
+
+    public void gas(double amount){
+        engine.speedFactor();
+        engine.incrementSpeed(amount);
+    }
+
+    public void brake(double amount){
+        engine.decrementSpeed(amount);
+    }
+
 }

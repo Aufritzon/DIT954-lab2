@@ -1,8 +1,7 @@
 import Model.Base.Car;
-import Model.Base.CarMovable;
-import Model.Base.Movable;
-import Model.Cars.Saab95.Saab95;
-import Model.Movements.TurboMovable;
+import Model.Base.Direction;
+import Model.Cars.Volvo240;
+
 
 import java.awt.*;
 
@@ -10,10 +9,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-
-
-
-
+        Car volvo = new Volvo240(0, 0, Direction.NORTH,4,Color.BLUE,"Volvo240");
 
     }
 }
