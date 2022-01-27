@@ -1,9 +1,15 @@
 package Model.Base;
 
+
+/**
+ * Engine holds all information abt the certain engine types. This class has methods which are used to retrieve the
+ * information but also set some of them.
+ */
 public abstract class Engine {
     private double enginePower;
     private double currentSpeed;
     private boolean turboOn;
+
 
     public Engine(double enginePower, double currentSpeed, boolean turboOn) {
         this.enginePower = enginePower;
@@ -14,6 +20,7 @@ public abstract class Engine {
     public double getEnginePower() {
         return enginePower;
     }
+
 
     public void startEngine(){
         currentSpeed = 0.1;
@@ -45,6 +52,7 @@ public abstract class Engine {
 
     public abstract double speedFactor();
 
-    protected abstract void incrementSpeed(double amount);
-    protected abstract void decrementSpeed(double amount);
+    public abstract void incrementSpeed(double amount);
+
+    public abstract void decrementSpeed(double amount);
 }

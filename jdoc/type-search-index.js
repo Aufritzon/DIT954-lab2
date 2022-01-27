@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Model.Base","l":"Direction"},{"p":"Model.Base","l":"Engine"},{"p":"Model.Cars","l":"Saab95"},{"p":"Model.Cars","l":"Volvo240"}];updateSearchResults();

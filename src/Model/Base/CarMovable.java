@@ -1,15 +1,36 @@
 package Model.Base;
 
+/**
+ *  CarMovable handles all movement and direction changes for the cars. The methods in this class are used to change
+ *  direction and position by applying the move(), turnLeft() and turnRight() on the cars.
+ *  This class implements the interface {@link Movable}
+ */
 public abstract class CarMovable implements Movable{
 
-    private Direction dir;
     private double x;
     private double y;
+    private Direction dir;
+
+    public enum Direction {
+        NORTH, SOUTH, EAST, WEST
+    }
 
     public CarMovable(double x, double y, Direction dir){
         this.x = x;
         this.y = y;
         this.dir = dir;
+    }
+
+    public Direction getDir() {
+        return dir;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
     }
 
     //Moves the car in the direction it is currently facing with currentSpeed

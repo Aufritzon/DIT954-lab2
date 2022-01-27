@@ -2,6 +2,12 @@ package Model.Base;
 
 import java.awt.*;
 
+/**
+ * Car handles all common traits among the cars. It stores the information of the cars, such as the number of doors,
+ * color of the car, the model name and the type of engine the car is using. It contains methods that can be used to
+ * retrieve this information but also change some of them.
+ * The position, direction and movement is sent to and handled by the superclass {@link CarMovable}
+ */
 public abstract class Car extends CarMovable {
 
     private final int nrDoors; // Number of doors on the car
@@ -40,12 +46,22 @@ public abstract class Car extends CarMovable {
     }
 
     public void gas(double amount){
-        engine.speedFactor();
+        testForSpeedException(amount);
         engine.incrementSpeed(amount);
+
     }
 
-    public void brake(double amount){
+    public void brake(double amount) {
+        testForSpeedException(amount);
         engine.decrementSpeed(amount);
+    }
+
+    private void testForSpeedException(double amount) {
+        if(amount < 0) {
+            throw new IllegalArgumentException("Amount can't be negative");
+        } else if(!(0 <= amount && amount <= 1)) {
+            throw new IllegalArgumentException("Amount must be between 0 and 1");
+        }
     }
 
 }
