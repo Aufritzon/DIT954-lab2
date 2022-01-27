@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="10" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test/testCarMovable/testTurnRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" />
+    </list>
+    <list id="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" name="Changes by sahrahassan" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/TrimmedEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/TrimmedEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Base/TurboEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/TurboEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Model/Base/Engine.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="7" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="7" end1="7" start2="12" end2="13" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="17" end1="17" start2="23" end2="24" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="47" end1="49" start2="54" end2="57" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/Base/Car.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="10" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="42" end1="43" start2="48" end2="49" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="44" end1="44" start2="50" end2="51" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="46" end1="47" start2="53" end2="55" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="49" end1="49" start2="57" end2="65" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/Base/CarMovable.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="7" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="4" end1="5" start2="9" end2="9" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+        <range start1="7" end1="7" start2="11" end2="16" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+        <range start1="13" end1="13" start2="22" end2="34" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/Cars/Volvo240.java">
+      <ranges>
+        <range start1="4" end1="5" start2="4" end2="4" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+        <range start1="8" end1="8" start2="7" end2="12" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
+        <range start1="11" end1="13" start2="15" end2="17" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="23ra9RX7zaCdwRbU3GVDPGdBq5x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jdoc" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showRenderedDocs" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Universitet\Datavetenskap\2022\VT\LP1\DIT954\Labs\DIT954-lab1\out" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Universitet\Datavetenskap\2022\VT\LP1\DIT954\DIT954-lab1\src" />
+      <recent name="G:\My Drive\Universitet\Datavetenskap\2022\VT\LP1\DIT954\DIT954-lab1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestIncrementSpeed.testIncrementAsExpected">
+    <configuration name="TestIncrementSpeed.testIncrementAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testTrimmedEngine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testTrimmedEngine" />
+      <option name="MAIN_CLASS_NAME" value="testTrimmedEngine.TestIncrementSpeed" />
+      <option name="METHOD_NAME" value="testIncrementAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCarMovable in DIT954-lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCarMovable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testCarMovable" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMove.testMoveCarNorth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCarMovable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testCarMovable" />
+      <option name="MAIN_CLASS_NAME" value="testCarMovable.testMove" />
+      <option name="METHOD_NAME" value="testMoveCarNorth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMove.testMoveCarSouth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCarMovable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testCarMovable" />
+      <option name="MAIN_CLASS_NAME" value="testCarMovable.testMove" />
+      <option name="METHOD_NAME" value="testMoveCarSouth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testTrimmedEngine in DIT954-lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testTrimmedEngine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testTrimmedEngine" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestIncrementSpeed.testIncrementAsExpected" />
+        <item itemvalue="JUnit.testTrimmedEngine in DIT954-lab1" />
+        <item itemvalue="JUnit.testCarMovable in DIT954-lab1" />
+        <item itemvalue="JUnit.testMove.testMoveCarSouth" />
+        <item itemvalue="JUnit.testMove.testMoveCarNorth" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="" />
+      <created>1642494508675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642494508675</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DIT954_lab1$testTrimmedEngine_in_DIT954_lab1.ic" NAME="testTrimmedEngine in DIT954-lab1 Coverage Results" MODIFIED="1643311561046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>testTrimmedEngine.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DIT954_lab1$testCarMovable_in_DIT954_lab1.ic" NAME="testCarMovable in DIT954-lab1 Coverage Results" MODIFIED="1643307283661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>testCarMovable.*</FILTER>
+    </SUITE>
+  </component>
+</project>
