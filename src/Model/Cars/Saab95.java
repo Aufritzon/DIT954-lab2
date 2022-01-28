@@ -10,7 +10,7 @@ import java.awt.*;
 public class Saab95 extends Car{
 
     public Saab95 (double x, double y, Direction dir) {
-        super(x, y, dir , 2, Color.RED, "Saab95", new TurboEngine(125, 0, false));
+        super(x, y, dir , 2, Color.RED, "Saab95", new TurboEngine(125, 0, new Turbo(false)));
     }
 
 }

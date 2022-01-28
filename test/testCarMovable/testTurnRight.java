@@ -17,6 +17,7 @@ public class testTurnRight {
     public void init() {
         saab = new Saab95(1, 1, NORTH);
         saab.engine.startEngine();
+        saab.engine.turbo.setTurboOn();
     }
 
     @Test

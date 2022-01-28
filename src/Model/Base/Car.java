@@ -15,6 +15,7 @@ public abstract class Car extends CarMovable {
     private final String modelName; // The car model name
     public final Engine engine;
 
+
     public Car (double x, double y, Direction dir, int nrDoors, Color color, String modelName, Engine engine){
         super(x, y, dir);
         this.nrDoors = nrDoors;

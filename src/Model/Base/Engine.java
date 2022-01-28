@@ -8,26 +8,25 @@ package Model.Base;
 public abstract class Engine {
     private double enginePower;
     private double currentSpeed;
-    private boolean turboOn;
+    public Turbo turbo;
 
-
-    public Engine(double enginePower, double currentSpeed, boolean turboOn) {
+    public Engine(double enginePower, double currentSpeed) {
         this.enginePower = enginePower;
         this.currentSpeed = currentSpeed;
-        this.turboOn = turboOn;
+    }
+
+    public Engine(double enginePower, double currentSpeed, Turbo turbo) {
+        this.enginePower = enginePower;
+        this.currentSpeed = currentSpeed;
+        this.turbo = turbo;
     }
 
     public double getEnginePower() {
         return enginePower;
     }
 
-
     public void startEngine(){
         currentSpeed = 0.1;
-    }
-
-    public void setEnginePower(double enginePower) {
-        this.enginePower = enginePower;
     }
 
     public void stopEngine(){
@@ -42,17 +41,12 @@ public abstract class Engine {
         currentSpeed = speed;
     }
 
-    public boolean getTurboOn() {
-        return turboOn;
-    }
-
-    public void setTurboOn(boolean turboOn) {
-        this.turboOn = turboOn;
-    }
-
     public abstract double speedFactor();
 
     public abstract void incrementSpeed(double amount);
 
     public abstract void decrementSpeed(double amount);
+
+
+
 }

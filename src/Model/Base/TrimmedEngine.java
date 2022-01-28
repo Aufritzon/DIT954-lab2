@@ -9,7 +9,7 @@ public class TrimmedEngine extends Engine{
     private final double trimFactor;
 
     public TrimmedEngine(double power, double speed, double trimFactor) {
-        super(power,speed,false);
+        super(power,speed);
         this.trimFactor = trimFactor;
     }
 

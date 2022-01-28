@@ -7,15 +7,15 @@ package Model.Base;
  */
 public class TurboEngine extends Engine{
 
-    public TurboEngine(double enginePower, double currentSpeed, boolean turboOn) {
-        super(enginePower, currentSpeed, turboOn);
+    public TurboEngine(double enginePower, double currentSpeed, Turbo turbo) {
+        super(enginePower, currentSpeed, turbo);
     }
 
     @Override
     public double speedFactor() {
-        double turbo = 1;
-        if (getTurboOn()) turbo = 1.3;
-        return getEnginePower() * 0.01 * turbo;
+        double val = 1;
+        if (turbo.getTurboOn()) val = 1.3;
+        return getEnginePower() * 0.01 * val ;
     }
 
     @Override
@@ -27,4 +27,7 @@ public class TurboEngine extends Engine{
     public void decrementSpeed(double amount){
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));
     }
+
+
+
 }
