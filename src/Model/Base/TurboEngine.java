@@ -7,7 +7,7 @@ package Model.Base;
  */
 public class TurboEngine extends Engine{
 
-    public TurboEngine(double enginePower, double currentSpeed, boolean turboOn) {
+    publicq TurboEngine(double enginePower, double currentSpeed, boolean turboOn) {
         super(enginePower, currentSpeed, turboOn);
     }
 

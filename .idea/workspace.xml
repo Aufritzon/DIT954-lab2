@@ -1,28 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="10" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/testCarMovable/testTurnRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Direction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/DIT954-lab1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.Direction.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.Direction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/Engine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/Engine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/Movable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/TrimmedEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/TrimmedEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/TurboEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/TurboEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/Saab95.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/Volvo240.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testCarMovable/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testCarMovable/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testCarMovable/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testCarMovable/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testCarMovable/testMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testCarMovable/testMove.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testCarMovable/testTurnLeft.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testCarMovable/testTurnLeft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testCarMovable/testTurnRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testCarMovable/testTurnRight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testTrimmedEngine/TestDecrementSpeed.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testTrimmedEngine/TestDecrementSpeed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testTrimmedEngine/TestIncrementSpeed.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testTrimmedEngine/TestIncrementSpeed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testTrimmedEngine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testTrimmedEngine/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdoc/testTrimmedEngine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/testTrimmedEngine/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testCarMovable/testMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testCarMovable/testMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testCarMovable/testTurnLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testCarMovable/testTurnLeft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testCarMovable/testTurnRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testCarMovable/testTurnRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testTrimmedEngine/TestDecrementSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testTrimmedEngine/TestDecrementSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testTrimmedEngine/TestIncrementSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testTrimmedEngine/TestIncrementSpeed.java" afterDir="false" />
     </list>
-    <list id="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" name="Changes by sahrahassan" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/CarMovable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/TrimmedEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/TrimmedEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Base/TurboEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Base/TurboEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cars/Volvo240.java" afterDir="false" />
-    </list>
+    <list id="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" name="Changes by sahrahassan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,40 +81,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Model/Base/Engine.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="7" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="7" end1="7" start2="12" end2="13" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="17" end1="17" start2="23" end2="24" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="47" end1="49" start2="54" end2="57" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Model/Base/Car.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="10" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="42" end1="43" start2="48" end2="49" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="44" end1="44" start2="50" end2="51" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="46" end1="47" start2="53" end2="55" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="49" end1="49" start2="57" end2="65" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Model/Base/CarMovable.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="7" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="4" end1="5" start2="9" end2="9" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-        <range start1="7" end1="7" start2="11" end2="16" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-        <range start1="13" end1="13" start2="22" end2="34" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Model/Cars/Volvo240.java">
-      <ranges>
-        <range start1="4" end1="5" start2="4" end2="4" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-        <range start1="8" end1="8" start2="7" end2="12" changelist="b02d95f3-7024-4e4c-9299-7cc7490a5bf5" />
-        <range start1="11" end1="13" start2="15" end2="17" changelist="56d82231-7d53-4dd5-a49c-c2a44fdd0181" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectId" id="23ra9RX7zaCdwRbU3GVDPGdBq5x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -97,9 +93,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jdoc" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -117,19 +114,17 @@
       <recent name="G:\My Drive\Universitet\Datavetenskap\2022\VT\LP1\DIT954\DIT954-lab1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestIncrementSpeed.testIncrementAsExpected">
-    <configuration name="TestIncrementSpeed.testIncrementAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in DIT954-lab1">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="DIT954-lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testTrimmedEngine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testTrimmedEngine" />
-      <option name="MAIN_CLASS_NAME" value="testTrimmedEngine.TestIncrementSpeed" />
-      <option name="METHOD_NAME" value="testIncrementAsExpected" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in DIT954-lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,54 +159,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMove.testMoveCarSouth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DIT954-lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testCarMovable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testCarMovable" />
-      <option name="MAIN_CLASS_NAME" value="testCarMovable.testMove" />
-      <option name="METHOD_NAME" value="testMoveCarSouth" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testTrimmedEngine in DIT954-lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DIT954-lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testTrimmedEngine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testTrimmedEngine" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.testCarMovable in DIT954-lab1" />
+      <item itemvalue="JUnit.testMove.testMoveCarNorth" />
+      <item itemvalue="JUnit.All in DIT954-lab1" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestIncrementSpeed.testIncrementAsExpected" />
-        <item itemvalue="JUnit.testTrimmedEngine in DIT954-lab1" />
-        <item itemvalue="JUnit.testCarMovable in DIT954-lab1" />
-        <item itemvalue="JUnit.testMove.testMoveCarSouth" />
+        <item itemvalue="JUnit.All in DIT954-lab1" />
         <item itemvalue="JUnit.testMove.testMoveCarNorth" />
+        <item itemvalue="JUnit.testCarMovable in DIT954-lab1" />
       </list>
     </recent_temporary>
   </component>
@@ -269,6 +227,7 @@
     <SUITE FILE_PATH="coverage/DIT954_lab1$testTrimmedEngine_in_DIT954_lab1.ic" NAME="testTrimmedEngine in DIT954-lab1 Coverage Results" MODIFIED="1643311561046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>testTrimmedEngine.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/DIT954_lab1$All_in_DIT954_lab1.ic" NAME="All in DIT954-lab1 Coverage Results" MODIFIED="1643383453687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT954_lab1$testCarMovable_in_DIT954_lab1.ic" NAME="testCarMovable in DIT954-lab1 Coverage Results" MODIFIED="1643307283661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>testCarMovable.*</FILTER>
     </SUITE>

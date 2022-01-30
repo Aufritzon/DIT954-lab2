@@ -9,6 +9,9 @@ import static Model.Base.CarMovable.Direction.NORTH;
 import static org.junit.Assert.assertEquals;
 
 
+/**
+ * Tests for the move() method in CarMovable
+ */
 public class testMove {
 
     private Car saab;

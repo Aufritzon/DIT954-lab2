@@ -9,6 +9,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static Model.Base.CarMovable.Direction.NORTH;
 
+/**
+ * Tests for the decrementSpeed() method in TrimmedEngine
+ */
 public class TestDecrementSpeed {
 
     private Car volvo;

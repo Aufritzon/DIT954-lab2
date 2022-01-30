@@ -11,6 +11,9 @@ import static org.junit.Assert.assertEquals;
 
 public class TestIncrementSpeed {
 
+    /**
+     * Tests for the incrementSpeed() method in TrimmedEngine
+     */
     private Car volvo;
 
     @Before

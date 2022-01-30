@@ -9,6 +9,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static Model.Base.CarMovable.Direction.NORTH;
 
+/**
+ * Tests for the turnLeft() method in CarMovable
+ */
 public class testTurnLeft {
 
     private Car saab;
