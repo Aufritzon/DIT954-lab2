@@ -2,15 +2,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
-<<<<<<< HEAD:test/testCarMovable/testTurnRight.java
 /**
  * Tests for the turnRight() method in CarMovable
  */
-public class testTurnRight {
-=======
+
 public class TestTurnRight {
->>>>>>> new:test/TestTurnRight.java
 
     private Saab95 saab;
 

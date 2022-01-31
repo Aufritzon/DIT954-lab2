@@ -3,15 +3,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-<<<<<<< HEAD:test/testCarMovable/testMove.java
-
 /**
  * Tests for the move() method in CarMovable
  */
-public class testMove {
-=======
 public class TestMove {
->>>>>>> new:test/TestMove.java
 
     private Car saab;
 

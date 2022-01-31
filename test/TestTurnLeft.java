@@ -3,14 +3,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-<<<<<<< HEAD:test/testCarMovable/testTurnLeft.java
 /**
  * Tests for the turnLeft() method in CarMovable
  */
-public class testTurnLeft {
-=======
+
 public class TestTurnLeft {
->>>>>>> new:test/TestTurnLeft.java
 
     private Car saab;
 
