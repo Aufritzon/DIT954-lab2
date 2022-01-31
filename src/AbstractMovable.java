@@ -1,28 +1,24 @@
-package Model.Base;
-
 /**
  *  CarMovable handles all movement and direction changes for the cars. The methods in this class are used to change
  *  direction and position by applying the move(), turnLeft() and turnRight() on the cars.
  *  This class implements the interface {@link Movable}
  */
-public abstract class CarMovable implements Movable{
+public abstract class AbstractMovable implements Movable{
 
     private double x;
     private double y;
     private Direction dir;
+    private double currentSpeed;
 
     public enum Direction {
         NORTH, SOUTH, EAST, WEST
     }
 
-    public CarMovable(double x, double y, Direction dir){
+    public AbstractMovable(double x, double y, Direction dir, double currentSpeed){
         this.x = x;
         this.y = y;
         this.dir = dir;
-    }
-
-    public Direction getDir() {
-        return dir;
+        this.currentSpeed = currentSpeed;
     }
 
     public double getX() {
@@ -33,15 +29,30 @@ public abstract class CarMovable implements Movable{
         return y;
     }
 
+    public Direction getDir() {
+        return dir;
+    }
+
+    public double getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public void setCurrentSpeed(double speed) {
+        currentSpeed = speed;
+    }
+
     //Moves the car in the direction it is currently facing with currentSpeed
-    public void move(double amount) {
+
+    @Override
+    public void move() {
         switch (dir) {
-            case NORTH->  y -= amount;
-            case SOUTH -> y += amount;
-            case EAST -> x += amount;
-            case WEST -> x -= amount;
+            case NORTH->  y -= currentSpeed;
+            case SOUTH -> y += currentSpeed;
+            case EAST -> x += currentSpeed;
+            case WEST -> x -= currentSpeed;
         }
     }
+
     @Override
     public void turnLeft() {
         switch (dir) {
@@ -61,4 +72,5 @@ public abstract class CarMovable implements Movable{
             case WEST -> dir = Direction.NORTH;
         }
     }
+
 }

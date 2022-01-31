@@ -1,30 +1,28 @@
-package testCarMovable;
-
-import Model.Base.Car;
-import Model.Base.CarMovable;
-import Model.Cars.Saab95;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static Model.Base.CarMovable.Direction.NORTH;
 
+<<<<<<< HEAD:test/testCarMovable/testTurnLeft.java
 /**
  * Tests for the turnLeft() method in CarMovable
  */
 public class testTurnLeft {
+=======
+public class TestTurnLeft {
+>>>>>>> new:test/TestTurnLeft.java
 
     private Car saab;
 
     @Before
     public void init() {
-        saab = new Saab95(1, 1, NORTH);
-        saab.engine.startEngine();
+        saab = new Saab95(1, 1, AbstractMovable.Direction.NORTH);
+        saab.startEngine();
     }
 
     @Test
     public void testFullRotation() {
-        CarMovable.Direction d1 = saab.getDir();
+        AbstractMovable.Direction d1 = saab.getDir();
         saab.turnLeft();
         saab.turnLeft();
         saab.turnLeft();

@@ -1,9 +1,7 @@
-package Model.Base;
-
 /**
  * Movable is implemented by CarMovable.
  *
- * @see CarMovable
+ * @see AbstractMovable
  */
 public interface Movable {
 

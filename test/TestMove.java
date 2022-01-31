@@ -1,25 +1,24 @@
-package testCarMovable;
-
-import Model.Base.Car;
-import Model.Cars.Saab95;
 import org.junit.Before;
 import org.junit.Test;
 
-import static Model.Base.CarMovable.Direction.NORTH;
 import static org.junit.Assert.assertEquals;
 
+<<<<<<< HEAD:test/testCarMovable/testMove.java
 
 /**
  * Tests for the move() method in CarMovable
  */
 public class testMove {
+=======
+public class TestMove {
+>>>>>>> new:test/TestMove.java
 
     private Car saab;
 
     @Before
     public void init() {
-        saab = new Saab95(1, 1, NORTH);
-        saab.engine.startEngine();
+        saab = new Saab95(1, 1, AbstractMovable.Direction.NORTH);
+        saab.startEngine();
     }
 
     @Test
@@ -31,7 +30,7 @@ public class testMove {
     @Test
     public void testMoveCarForthAndBack() {
         saab.move();
-        saab.engine.setCurrentSpeed(-saab.engine.getCurrentSpeed());
+        saab.setCurrentSpeed(-saab.getCurrentSpeed());
         saab.move();
         assertEquals(1, saab.getY(), 0.0);
     }
