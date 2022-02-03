@@ -12,4 +12,7 @@ public abstract class Car extends Vehicle {
     public Car(double x, double y, Direction dir, double currentSpeed, int nrDoors, Color color, String modelName, double enginePower) {
         super(x, y, dir, currentSpeed, nrDoors, color, modelName, enginePower);
     }
+
+
+
 }

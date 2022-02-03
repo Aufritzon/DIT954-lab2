@@ -44,27 +44,22 @@ public abstract class Vehicle extends AbstractMovable{
         setCurrentSpeed(0);
     }
 
-    public abstract double speedFactor();
-
     public void gas(double amount) {
-        testForSpeedException(amount);
-        incrementSpeed(amount);
+        decrementSpeed(HelperMethods.valueWithinBounds(amount, 0, 1));
+    }
+
+    public void brake(double amount) {
+        decrementSpeed(HelperMethods.valueWithinBounds(amount, 0, 1));
     }
 
     public abstract void incrementSpeed(double amount);
 
-    public void brake(double amount) {
-        testForSpeedException(amount);
-        decrementSpeed(amount);
-    }
-
     public abstract void decrementSpeed(double amount);
 
-    private void testForSpeedException(double amount) {
-        if(amount < 0) {
-            throw new IllegalArgumentException("Amount can't be negative");
-        } else if(!(0 <= amount && amount <= 1)) {
-            throw new IllegalArgumentException("Amount must be between 0 and 1");
-        }
+    public abstract double speedFactor();
+
+    public void setBoundedSpeed(double speed) {
+            setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));
     }
+
 }

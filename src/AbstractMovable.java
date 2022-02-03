@@ -29,8 +29,20 @@ public abstract class AbstractMovable implements Movable{
         return y;
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     public Direction getDir() {
         return dir;
+    }
+
+    public void setDir(Direction dir) {
+        this.dir = dir;
     }
 
     public double getCurrentSpeed() {

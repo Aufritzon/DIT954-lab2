@@ -6,6 +6,7 @@ import java.awt.*;
  * All of these are sent to the superclass {@link Car}
  */
 public class Volvo240 extends Car {
+
     public final static double trimFactor = 1.25;
 
     public Volvo240(double x, double y, Direction dir){
