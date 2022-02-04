@@ -1,3 +1,6 @@
+/**
+ * main program
+ */
 public class Program {
     public static void main(String[] args) {
         Scania s = new Scania(2, 2, AbstractMovable.Direction.NORTH);

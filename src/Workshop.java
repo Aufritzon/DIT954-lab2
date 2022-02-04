@@ -1,7 +1,10 @@
 import java.util.Deque;
 import java.util.LinkedList;
 
-
+/**
+ *
+ * @param <T>
+ */
 public class Workshop <T extends Car> {
     private final int capacity;
 

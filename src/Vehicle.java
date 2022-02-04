@@ -1,5 +1,8 @@
 import java.awt.*;
 
+/**
+ * implemented by car and trailertruck. Holds all common traits and all common functionality between them
+ */
 public abstract class Vehicle extends AbstractMovable{
 
     private final int nrDoors; // Number of doors on the car
@@ -7,6 +10,17 @@ public abstract class Vehicle extends AbstractMovable{
     private final String modelName; // The car model name
     private final double enginePower;
 
+    /**
+     * constructor for Vehicle
+     * @param x
+     * @param y
+     * @param dir
+     * @param currentSpeed
+     * @param nrDoors
+     * @param color
+     * @param modelName
+     * @param enginePower
+     */
     public Vehicle (double x, double y, Direction dir, double currentSpeed,
                 int nrDoors, Color color, String modelName, double enginePower){
 
@@ -17,22 +31,42 @@ public abstract class Vehicle extends AbstractMovable{
         this.enginePower = enginePower;
     }
 
+    /**
+     * returns the number of doors on the vehicle
+     * @return nrDoors
+     */
     public int getNrDoors(){
         return nrDoors;
     }
 
+    /**
+     * returns the color of the vehicle
+     * @return color
+     */
     public Color getColor(){
         return color;
     }
 
+    /**
+     * sets the color of the vehicle
+     * @param color
+     */
     public void setColor(Color color){
         this.color = color;
     }
 
+    /**
+     * returns the model name of the vehicle
+     * @return modelName
+     */
     public String getModelName() {
         return modelName;
     }
 
+    /**
+     * returns the engine power of the vehicle
+     * @return enginePower
+     */
     public double getEnginePower() {
         return enginePower;
     }
