@@ -9,7 +9,7 @@ public class Saab95 extends Car{
     private boolean turboOn;
 
     public Saab95 (double x, double y, AbstractMovable.Direction dir) {
-        super(x, y, dir , 0, 4, Color.RED, "Saab95", 125);
+        super(x, y, dir , 0, 4, Color.RED, "Saab95", 125, 2);
         this.turboOn = false;
     }
 
@@ -27,16 +27,5 @@ public class Saab95 extends Car{
         if (turboOn) val = 1.3;
         return getEnginePower() * 0.01 * val ;
     }
-
-    @Override
-    public void incrementSpeed(double amount){
-        setBoundedSpeed(getCurrentSpeed() + speedFactor() * amount);
-    }
-
-    @Override
-    public void decrementSpeed(double amount){
-        setBoundedSpeed(getCurrentSpeed() - speedFactor() * amount);
-    }
-
 }
 

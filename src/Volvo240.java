@@ -10,7 +10,7 @@ public class Volvo240 extends Car {
     public final static double trimFactor = 1.25;
 
     public Volvo240(double x, double y, Direction dir){
-        super(x,  y, dir, 0, 4, Color.BLACK, "Volvo240",100);
+        super(x,  y, dir, 0, 4, Color.BLACK, "Volvo240", 100, 2);
     }
 
     @Override
@@ -18,13 +18,4 @@ public class Volvo240 extends Car {
         return getEnginePower() * 0.01 * trimFactor;
     }
 
-    @Override
-    public void incrementSpeed(double amount){
-        setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
-    }
-
-    @Override
-    public void decrementSpeed(double amount){
-        setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));
-    }
 }

@@ -8,11 +8,25 @@ import java.awt.*;
  */
 public abstract class Car extends Vehicle {
 
+    private final double weight;
 
-    public Car(double x, double y, Direction dir, double currentSpeed, int nrDoors, Color color, String modelName, double enginePower) {
+    public Car(double x, double y, Direction dir, double currentSpeed, int nrDoors,
+               Color color, String modelName, double enginePower, double weight) {
         super(x, y, dir, currentSpeed, nrDoors, color, modelName, enginePower);
+        this.weight = weight;
     }
 
+    public double getWeight() {
+        return weight;
+    }
 
+    @Override
+    public void incrementSpeed(double amount){
+        setBoundedSpeed(getCurrentSpeed() + speedFactor() * amount);
+    }
 
+    @Override
+    public void decrementSpeed(double amount){
+        setBoundedSpeed(getCurrentSpeed() - speedFactor() * amount);
+    }
 }

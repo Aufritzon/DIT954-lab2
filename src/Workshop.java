@@ -1,10 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Deque;
+import java.util.LinkedList;
 
-public class Workshop <T extends Car>{
+
+public class Workshop <T extends Car> {
     private final int capacity;
 
-    List<T> cars = new ArrayList<>();
+    Deque<T> cars = new LinkedList<>();
 
     public Workshop(int capacity) {
         this.capacity = capacity;
@@ -14,9 +15,14 @@ public class Workshop <T extends Car>{
         return capacity;
     }
 
-    public List<T> getCars() {
-        return cars;
+    public void storeCar (T car){//ger statiskt fel när man lämnar in annan sorts bil än Volvo
+        if (cars.size() < capacity) {
+            cars.push(car);
+        }
     }
 
-    public loadCar()
+    public T retrieveCar() { // Returnerar Class information hos bilarna i verkstaden
+        return cars.pop();
+    }
+
 }
