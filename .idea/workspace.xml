@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TrailerTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TrailerTruck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Workshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/TrailerTruck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/TrailerTruck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Transporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Transporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Verkstad240.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Workshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Workshop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
     </list>
     <list id="a41128b5-469f-4335-88ed-ee6b92224ae9" name="Changes by sahrahassan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +78,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="JUnit.TestLoadCar">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="DIT954-lab1" />
@@ -84,8 +91,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestLoadCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLoadCar" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRaiseLowerTrailer.testLowerTrailer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT954-lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRaiseLowerTrailer" />
+      <option name="METHOD_NAME" value="testLowerTrailer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestLoadCar" />
+        <item itemvalue="JUnit.TestRaiseLowerTrailer.testLowerTrailer" />
         <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>

@@ -45,7 +45,7 @@ public abstract class TrailerTruck extends Vehicle{
 
     /**
      * Sets the speed as long as the trailer is able to move,
-     * and the speed >0 and <= enginePower,and the trailer is able to move.
+     * and the speed >0 and <= enginePower.
      * @param speed
      */
     private void setSafeSpeed(double speed) {

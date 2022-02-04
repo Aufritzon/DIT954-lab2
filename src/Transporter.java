@@ -7,9 +7,9 @@ import java.util.LinkedList;
  */
 public class Transporter extends TrailerTruck {
 
-    private final static int LOADING_CAPACITY = 10;
-    private final static int MIN_DISTANCE_FOR_LOADING = 5;
-    private final static double MAX_WEIGHT_PER_CAR = 2.5;
+    public final static int LOADING_CAPACITY = 10;
+    public final static int MIN_DISTANCE_FOR_LOADING = 5;
+    public final static double MAX_WEIGHT_PER_CAR = 2.5;
 
     private boolean isTrailerRaised;
     private final Deque<Car> load = new LinkedList<>();

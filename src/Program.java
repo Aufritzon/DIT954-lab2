@@ -10,12 +10,9 @@ public class Program {
         Transporter t = new Transporter(0 , 0, AbstractMovable.Direction.NORTH);
         t.loadCar(saab);
 
-        Workshop<Volvo240> volvo240Workshop = new Workshop<>(10);
+        Workshop<Car> volvo240Workshop = new Workshop<>(10);
 
-        volvo240Workshop.storeCar(volvo);
+        volvo240Workshop.storeCar(saab);
 
-        Volvo240 f = volvo240Workshop.retrieveCar();
-
-        System.out.println(f == volvo);
     }
 }
