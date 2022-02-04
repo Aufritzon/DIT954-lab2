@@ -11,13 +11,13 @@ public abstract class TrailerTruck extends Vehicle{
     }
 
     /**
-     * abstract method to be implemented by the subclasses
+     * Each subclass decide when their trailer is in a movable state.
      * @return
      */
     public abstract boolean isTrailerMovable();
 
     /**
-     * Increases the currentspeed with an amount as long as the speed is more than 0 and less than the enginepower.
+     * Safely increases the speed by an amount.
      * @param amount
      */
     @Override
@@ -26,16 +26,7 @@ public abstract class TrailerTruck extends Vehicle{
     }
 
     /**
-     * calculates the speed factor which is used to calculate the speed
-     * @return
-     */
-    @Override
-    public double speedFactor() {
-        return getEnginePower() * 0.01;
-    }
-
-    /**
-     * Decreases the currentspeed with an amount as long as the speed is more than 0 and less than the enginepower.
+     * Safely decreases the speed by an amount.
      * @param amount
      */
     @Override
@@ -44,7 +35,17 @@ public abstract class TrailerTruck extends Vehicle{
     }
 
     /**
-     * Sets the currentspeed with an amount as long as the speed is more than 0 and less than the enginepower.
+     * Calculates the speed factor from which to calculate the speed.
+     * @return
+     */
+    @Override
+    public double speedFactor() {
+        return getEnginePower() * 0.01;
+    }
+
+    /**
+     * Sets the speed as long as the trailer is able to move,
+     * and the speed >0 and <= enginePower,and the trailer is able to move.
      * @param speed
      */
     private void setSafeSpeed(double speed) {

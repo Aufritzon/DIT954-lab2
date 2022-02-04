@@ -34,12 +34,12 @@ public class Transporter extends TrailerTruck {
     }
 
     /**
-     * Raises the trailer ramp which sets istrailerraised to true
+     * Raises the trailer ramp.
      */
     public void raiseTrailer(){ isTrailerRaised = true;}
 
     /**
-     * Lowers the trailer ramp which sets istrailerraised to false
+     * Lowers the trailer ramp.
      */
     public void lowerTrailer(){
         isTrailerRaised = false;

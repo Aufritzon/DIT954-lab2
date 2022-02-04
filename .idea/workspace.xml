@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TrailerTruck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab1/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab1/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trailer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrailerTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TrailerTruck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Workshop.java" afterDir="false" />
     </list>
     <list id="a41128b5-469f-4335-88ed-ee6b92224ae9" name="Changes by sahrahassan" comment="" />
