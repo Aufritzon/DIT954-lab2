@@ -80,7 +80,7 @@ public abstract class Vehicle extends AbstractMovable{
     }
 
     public void gas(double amount) {
-        decrementSpeed(HelperMethods.valueWithinBounds(amount, 0, 1));
+        incrementSpeed(HelperMethods.valueWithinBounds(amount, 0, 1));
     }
 
     public void brake(double amount) {
@@ -96,5 +96,4 @@ public abstract class Vehicle extends AbstractMovable{
     public void setBoundedSpeed(double speed) {
             setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));
     }
-
 }

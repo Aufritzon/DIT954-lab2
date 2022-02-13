@@ -3,7 +3,7 @@
  *  direction and position by applying the move(), turnLeft() and turnRight() on the cars.
  *  This class implements the interface {@link Movable}
  */
-public abstract class AbstractMovable implements Movable{
+public abstract class AbstractMovable implements Movable {
 
     private double x;
     private double y;
@@ -14,7 +14,7 @@ public abstract class AbstractMovable implements Movable{
         NORTH, SOUTH, EAST, WEST
     }
 
-    public AbstractMovable(double x, double y, Direction dir, double currentSpeed){
+    public AbstractMovable(double x, double y, Direction dir, double currentSpeed) {
         this.x = x;
         this.y = y;
         this.dir = dir;
@@ -58,7 +58,7 @@ public abstract class AbstractMovable implements Movable{
     @Override
     public void move() {
         switch (dir) {
-            case NORTH->  y -= currentSpeed;
+            case NORTH -> y -= currentSpeed;
             case SOUTH -> y += currentSpeed;
             case EAST -> x += currentSpeed;
             case WEST -> x -= currentSpeed;
@@ -85,4 +85,8 @@ public abstract class AbstractMovable implements Movable{
         }
     }
 
+    public void invertDirection() {
+        turnRight();
+        turnRight();
+    }
 }
