@@ -1,7 +1,13 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.Timer;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.*;
+import java.util.List;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -21,7 +27,7 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
-    ArrayList<Vehicle> cars = new ArrayList<>();
+    List<Vehicle> cars = new ArrayList<>();
 
     //methods:
 
@@ -29,10 +35,17 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.cars.add(new Volvo240(50, 50, AbstractMovable.Direction.EAST));
+        List<Vehicle> vehicles = List.of(new Volvo240(50, 50, AbstractMovable.Direction.EAST),
+                                         new Saab95(100, 100, AbstractMovable.Direction.NORTH),
+                                         new Scania(300, 300, AbstractMovable.Direction.SOUTH));
+
+        cc.cars.addAll(vehicles);
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
+
+
+
 
         // Start the timer
         cc.timer.start();
@@ -45,25 +58,24 @@ public class CarController {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle car : cars) {
                 car.move();
-                if (isOverlappingWall(car)) {
-                    switch (car.getDir()) {
-                        case NORTH -> car.setY(0);
-                        case SOUTH -> car.setY(800-240);
-                        case WEST -> car.setX(0);
-                        case EAST -> car.setX(800 - frame.drawPanel.getWidth());
-                    }
-                    car.stopEngine();
-                    car.invertDirection();
-                    car.startEngine();
-                }
                 int x = (int) Math.round(car.getX());
                 int y = (int) Math.round(car.getY());
-                frame.drawPanel.moveit(x, y);
+
+                frame.drawPanel.
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
     }
+
+    List<Point> getCarPoints() {
+        List<Point> carPoints = new ArrayList<>();
+        for (Vehicle v : cars) {
+            carPoints.add(new Point((int)Math.round(v.getX()), (int)Math.round(v.getY())));
+        }
+        return  carPoints;
+    }
+
 
 
     // Calls the gas method for each car once

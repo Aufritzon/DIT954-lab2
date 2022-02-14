@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,18 +12,22 @@ import java.util.List;
 
 public class DrawPanel extends JPanel{
 
+    List<DrawVehicle> drawVehicles;
+
     // Just a single image, TODO: Generalize
-    List<BufferedImage> carPics = new ArrayList<>();
+    BufferedImage volvoImage;
+    BufferedImage saabImage;
+    BufferedImage scaniaImage;
+
+
+
 
     // To keep track of a singel cars position
     Point volvoPoint = new Point();
-    List<Point> carPoints = new ArrayList<>();
+
+
 
     // TODO: Make this genereal for all cars
-    void moveit(int x, int y, Car car){
-        "pics/" + car.getClass().getName()
-        volvoPoint.y = y;
-    }
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -37,7 +42,7 @@ public class DrawPanel extends JPanel{
 
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
-            for
+
             volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
         } catch (IOException ex)
         {
@@ -46,11 +51,28 @@ public class DrawPanel extends JPanel{
 
     }
 
+    public void setDrawVehicles (List<DrawVehicle> drawVehicles) {
+        this.drawVehicles = drawVehicles;
+
+    }
+
     // This method is called each time the panel updates/refreshes/repaints itself
     // TODO: Change to suit your needs.
-    @Override
-    protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g, List<Vehicle> vehicles) {
         super.paintComponent(g);
-        g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
+        for(Vehicle v : vehicles) {
+            g.drawImage(vehicleImage(v), (int)Math.round(v.getX()), (int)Math.round(v.getY()), null ); // see javadoc for more info on the parameters
+        }
     }
+
+    private BufferedImage vehicleImage(Vehicle v) {
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/" + v.getClass().getName() + ".jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return image;
+    }
+
 }
