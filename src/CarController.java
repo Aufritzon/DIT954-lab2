@@ -29,11 +29,16 @@ public class CarController {
     // A list of cars, modify if needed
     List<Vehicle> cars = new ArrayList<>();
 
+    Assets assets = new Assets();
+
     //methods:
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
+
+
+        Assets assets = new Assets();
 
         List<Vehicle> vehicles = List.of(new Volvo240(50, 50, AbstractMovable.Direction.EAST),
                                          new Saab95(100, 100, AbstractMovable.Direction.NORTH),
@@ -43,9 +48,6 @@ public class CarController {
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
-
-
-
 
         // Start the timer
         cc.timer.start();
@@ -61,17 +63,19 @@ public class CarController {
                 int x = (int) Math.round(car.getX());
                 int y = (int) Math.round(car.getY());
 
-                frame.drawPanel.
+                frame.drawPanel.moveIt(x,y ,car);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
     }
 
-    List<Point> getCarPoints() {
-        List<Point> carPoints = new ArrayList<>();
+
+
+    Map<Vehicle,Point> getCarPoints() {
+        Map<Vehicle,Point> carPoints = new HashMap<>();
         for (Vehicle v : cars) {
-            carPoints.add(new Point((int)Math.round(v.getX()), (int)Math.round(v.getY())));
+            carPoints.put(v, new Point((int)Math.round(v.getX()), (int)Math.round(v.getY())));
         }
         return  carPoints;
     }
@@ -95,7 +99,14 @@ public class CarController {
         }
     }
 
+    void invertDirection(Vehicle vehicle) {
+        vehicle.turnRight();
+        vehicle.turnRight();
+    }
+
     boolean isOverlappingWall(Vehicle car) {
         return car.getX() <= 0 || car.getY() <= 0 || car.getX() >= 800 || car.getY() >= 800-240;
     }
+
+
 }

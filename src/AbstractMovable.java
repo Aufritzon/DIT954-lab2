@@ -84,9 +84,4 @@ public abstract class AbstractMovable implements Movable {
             case WEST -> dir = Direction.NORTH;
         }
     }
-
-    public void invertDirection() {
-        turnRight();
-        turnRight();
-    }
 }
