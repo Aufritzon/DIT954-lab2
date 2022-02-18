@@ -1,6 +1,7 @@
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,8 +44,12 @@ public class Assets {
 
     private BufferedImage getImage(String fileName) {
         BufferedImage image;
+        InputStream inStream = DrawPanel.class.getResourceAsStream(IMAGE_DIR + fileName);
+        if (inStream == null) {
+            throw new IllegalArgumentException("File is missing: " + IMAGE_DIR + fileName);
+        }
         try {
-            image = ImageIO.read(DrawPanel.class.getResourceAsStream(IMAGE_DIR + fileName));
+            image = ImageIO.read(inStream);
         } catch (IOException e) {
             throw new IllegalArgumentException("File is missing: " + IMAGE_DIR + fileName);
         }

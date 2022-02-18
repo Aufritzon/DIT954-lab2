@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d82231-7d53-4dd5-a49c-c2a44fdd0181" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/Drawable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drawable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DIT954-lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DIT954-lab2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/AbstractMovable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/AbstractMovable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/Assets.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarController$TimerListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/CarView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/DrawVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/DrawVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractMovable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrailerTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TrailerTruck.java" afterDir="false" />
     </list>
     <list id="a41128b5-469f-4335-88ed-ee6b92224ae9" name="Changes by sahrahassan" comment="" />
     <option name="SHOW_DIALOG" value="false" />

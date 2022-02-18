@@ -31,23 +31,32 @@ public class CarController {
 
     Assets assets = new Assets();
 
+    Map<Vehicle,BufferedImage> vehicleImageMap = new HashMap<>();
+
+
     //methods:
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
 
+        List<Drawable> drawables = new ArrayList<>();
 
-        Assets assets = new Assets();
 
         List<Vehicle> vehicles = List.of(new Volvo240(50, 50, AbstractMovable.Direction.EAST),
                                          new Saab95(100, 100, AbstractMovable.Direction.NORTH),
-                                         new Scania(300, 300, AbstractMovable.Direction.SOUTH));
+                                         new Scania(300, 300, AbstractMovable.Direction.SOUTH),
+                                         new Volvo240(400, 400, AbstractMovable.Direction.WEST));
+
+        for (Vehicle v : vehicles) {
+            Drawable d = new Drawable(v.getModelName(), (int)(Math.round(v.getX())), (int)(Math.round(v.getY())));
+            drawables.add(d);
+        }
 
         cc.cars.addAll(vehicles);
 
         // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+        cc.frame = new CarView("CarSim 1.0", cc, drawables);
 
         // Start the timer
         cc.timer.start();
@@ -58,29 +67,32 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle car : cars) {
-                car.move();
-                int x = (int) Math.round(car.getX());
-                int y = (int) Math.round(car.getY());
+            Vehicle v;
+            Drawable d;
+            for (int i = 0 ; i < cars.size(); i++) {
+                v = cars.get(i);
+                d = frame.drawPanel.getDrawables().get(i);
 
-                frame.drawPanel.moveIt(x,y ,car);
-                // repaint() calls the paintComponent method of the panel
+                v.move();
+
+                int x = (int) Math.round(v.getX());
+                int y = (int) Math.round(v.getY());
+
+                if(frame.drawPanel.isInsideDrawPanel(d, x, y)) {
+                    frame.drawPanel.moveit(d, x, y);
+                } else {
+                    v.setX(frame.drawPanel.getDrawablePoint(d).x);
+                    v.setY(frame.drawPanel.getDrawablePoint(d).y);
+                    invertDirection(v);
+                }
+
                 frame.drawPanel.repaint();
             }
+
+
+
         }
     }
-
-
-
-    Map<Vehicle,Point> getCarPoints() {
-        Map<Vehicle,Point> carPoints = new HashMap<>();
-        for (Vehicle v : cars) {
-            carPoints.put(v, new Point((int)Math.round(v.getX()), (int)Math.round(v.getY())));
-        }
-        return  carPoints;
-    }
-
-
 
     // Calls the gas method for each car once
     void gas(int amount) {
@@ -100,9 +112,12 @@ public class CarController {
     }
 
     void invertDirection(Vehicle vehicle) {
+        vehicle.stopEngine();
         vehicle.turnRight();
         vehicle.turnRight();
+        vehicle.startEngine();
     }
+
 
     boolean isOverlappingWall(Vehicle car) {
         return car.getX() <= 0 || car.getY() <= 0 || car.getX() >= 800 || car.getY() >= 800-240;

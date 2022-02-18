@@ -31,7 +31,7 @@ public abstract class TrailerTruck extends Vehicle{
      */
     @Override
     public void decrementSpeed(double amount) {
-        setSafeSpeed(getCurrentSpeed() + amount);
+        setSafeSpeed(getCurrentSpeed() - amount);
     }
 
     /**
