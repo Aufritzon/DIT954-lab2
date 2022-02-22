@@ -1,11 +1,7 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import javax.swing.Timer;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -29,11 +25,6 @@ public class CarController {
     // A list of cars, modify if needed
     List<Vehicle> cars = new ArrayList<>();
 
-    Assets assets = new Assets();
-
-    Map<Vehicle,BufferedImage> vehicleImageMap = new HashMap<>();
-
-
     //methods:
 
     public static void main(String[] args) {
@@ -42,11 +33,11 @@ public class CarController {
 
         List<Drawable> drawables = new ArrayList<>();
 
-
-        List<Vehicle> vehicles = List.of(new Volvo240(50, 50, AbstractMovable.Direction.EAST),
-                                         new Saab95(100, 100, AbstractMovable.Direction.NORTH),
-                                         new Scania(300, 300, AbstractMovable.Direction.SOUTH),
-                                         new Volvo240(400, 400, AbstractMovable.Direction.WEST));
+        List<Vehicle> vehicles = List.of(
+                new Volvo240(0, 100, AbstractMovable.Direction.EAST),
+                new Saab95(0, 200, AbstractMovable.Direction.EAST) ,
+                new Scania(0, 300, AbstractMovable.Direction.EAST)
+        );
 
         for (Vehicle v : vehicles) {
             Drawable d = new Drawable(v.getModelName(), (int)(Math.round(v.getX())), (int)(Math.round(v.getY())));
@@ -85,12 +76,8 @@ public class CarController {
                     v.setY(frame.drawPanel.getDrawablePoint(d).y);
                     invertDirection(v);
                 }
-
                 frame.drawPanel.repaint();
             }
-
-
-
         }
     }
 
@@ -111,17 +98,60 @@ public class CarController {
         }
     }
 
+    void startEngine() {
+        for (Vehicle car : cars
+        ) {
+            car.startEngine();
+        }
+    }
+
+    void stopEngine() {
+        for (Vehicle car : cars
+        ) {
+            car.stopEngine();
+        }
+    }
+
+    void lowerBed() {
+        for (Vehicle car : cars
+        ) {
+            if (car instanceof Scania){
+                ((Scania) car).lowerTrailer();
+            }
+        }
+    }
+
+    void raiseBed() {
+        for (Vehicle car : cars
+        ) {
+            if (car instanceof Scania){
+                ((Scania) car).raiseTrailer(70);
+            }
+        }
+    }
+
+    void turboOn() {
+        for (Vehicle car : cars
+        ) {
+            if (car instanceof Saab95){
+                ((Saab95) car).setTurboOn();
+            }
+        }
+    }
+
+    void turboOff() {
+        for (Vehicle car : cars
+        ) {
+            if (car instanceof Saab95){
+                ((Saab95) car).setTurboOff();
+            }
+        }
+    }
+
     void invertDirection(Vehicle vehicle) {
         vehicle.stopEngine();
         vehicle.turnRight();
         vehicle.turnRight();
         vehicle.startEngine();
     }
-
-
-    boolean isOverlappingWall(Vehicle car) {
-        return car.getX() <= 0 || car.getY() <= 0 || car.getX() >= 800 || car.getY() >= 800-240;
-    }
-
-
 }

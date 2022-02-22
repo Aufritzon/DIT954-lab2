@@ -31,28 +31,7 @@ public class DrawPanel extends JPanel{
     }
 
 
-    void placeAtBoarder(Drawable d) {
-        d.setPoint();
 
-    }
-
-    public enum Overlap {
-        ABOVE,
-        BELOW,
-        RIGHT,
-        LEFT;
-
-        Overlap(int x, int y) {
-            int maxX = x + image.getWidth();
-            int maxY = y + image.getHeight();
-
-            boolean isAbove = y < 0;
-            boolean isBelow = maxY > this.getHeight();
-            boolean isRightOff = maxX > this.getWidth();
-            boolean isLeftOff = x < 0;
-
-        }
-    }
 
 
     boolean isInsideDrawPanel(Drawable d, int x, int y) {
