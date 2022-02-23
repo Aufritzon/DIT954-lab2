@@ -1,3 +1,6 @@
+import application.model.AbstractMovable;
+import application.model.Car;
+import application.model.Volvo240;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>application.view.CarController</OriginalElement>
+  <nodes>
+    <node x="282.0" y="133.0">application.view.CarController.TimerListener</node>
+    <node x="808.0" y="145.5">application.view.CarView</node>
+    <node x="295.5" y="260.5">application.model.Vehicle</node>
+    <node x="585.5" y="133.0">application.view.CarController</node>
+    <node x="-9.5" y="121.5">application.view.DrawPanel</node>
+    <node x="342.0" y="-18.0">application.view.Drawable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="application.view.CarView" target="application.view.DrawPanel" relationship="CREATE">
+      <point x="5.0" y="-0.0" />
+      <point x="865.0" y="605.0" />
+      <point x="95.0" y="605.0" />
+      <point x="-5.0" y="-0.0" />
+    </edge>
+    <edge source="application.view.CarView" target="application.view.CarController" relationship="TO_ONE">
+      <point x="0.0" y="-7.5" />
+      <point x="74.5" y="-7.5" />
+    </edge>
+    <edge source="application.view.CarController" target="application.view.CarView" relationship="TO_ONE">
+      <point x="74.5" y="7.5" />
+      <point x="0.0" y="7.5" />
+    </edge>
+    <edge source="application.view.CarController" target="application.model.Vehicle" relationship="DEPENDENCY">
+      <point x="5.0" y="-0.0" />
+      <point x="665.0" y="425.0" />
+      <point x="104.5" y="5.0" />
+    </edge>
+    <edge source="application.view.CarController.TimerListener" target="application.model.Vehicle" relationship="DEPENDENCY">
+      <point x="0.0" y="27.0" />
+      <point x="0.0" y="-159.5" />
+    </edge>
+    <edge source="application.view.CarController" target="application.view.Drawable" relationship="CREATE">
+      <point x="0.0" y="-27.0" />
+      <point x="660.0" y="40.0" />
+      <point x="58.0" y="20.0" />
+    </edge>
+    <edge source="application.view.CarView" target="application.view.DrawPanel" relationship="TO_ONE">
+      <point x="-5.0" y="14.5" />
+      <point x="855.0" y="595.0" />
+      <point x="105.0" y="595.0" />
+      <point x="5.0" y="38.5" />
+    </edge>
+    <edge source="application.view.CarView" target="application.view.Drawable" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.5" />
+      <point x="860.0" y="20.0" />
+      <point x="58.0" y="-0.0" />
+    </edge>
+    <edge source="application.view.CarController" target="application.view.CarController.TimerListener" relationship="CREATE">
+      <point x="-74.5" y="-5.0" />
+      <point x="118.0" y="-5.0" />
+    </edge>
+    <edge source="application.view.CarController" target="application.model.Vehicle" relationship="TO_MANY">
+      <point x="-5.0" y="27.0" />
+      <point x="655.0" y="415.0" />
+      <point x="104.5" y="-5.0" />
+    </edge>
+    <edge source="application.view.CarView" target="application.view.CarController" relationship="DEPENDENCY">
+      <point x="-52.0" y="-2.5" />
+      <point x="74.5" y="-2.5" />
+    </edge>
+    <edge source="application.view.CarController.TimerListener" target="application.view.CarController" relationship="INNER_CLASS">
+      <point x="118.0" y="5.0" />
+      <point x="0.0" y="5.0" />
+    </edge>
+    <edge source="application.view.CarController.TimerListener" target="application.view.DrawPanel" relationship="DEPENDENCY">
+      <point x="-118.0" y="-0.0" />
+      <point x="109.5" y="-0.0" />
+    </edge>
+    <edge source="application.view.CarController.TimerListener" target="application.view.Drawable" relationship="DEPENDENCY">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="application.view.DrawPanel" target="application.view.Drawable" relationship="TO_MANY">
+      <point x="5.0" y="-38.5" />
+      <point x="105.0" y="25.0" />
+      <point x="-58.0" y="5.0" />
+    </edge>
+    <edge source="application.view.CarController" target="application.view.CarView" relationship="CREATE">
+      <point x="74.5" y="2.5" />
+      <point x="0.0" y="2.5" />
+    </edge>
+    <edge source="application.view.DrawPanel" target="application.view.Drawable" relationship="DEPENDENCY">
+      <point x="-5.0" y="-38.5" />
+      <point x="95.0" y="15.0" />
+      <point x="0.0" y="-5.0" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal Groups" zoom="1.0" showDependencies="true" x="451.0" y="293.5" />
+  <SelectedNodes>
+    <node>application.view.DrawPanel</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

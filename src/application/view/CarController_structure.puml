@@ -1,0 +1,359 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "application.view.CarController",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_104069929 { 
+   	label=model
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   AbstractMovable1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)AbstractMovable</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   currentSpeed: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   dir: Direction [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   x: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   y: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ move()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ turnLeft()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ turnRight()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Car1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Car</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   weight: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ decrementSpeed(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ incrementSpeed(amount: double)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+HelperMethods1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)HelperMethods</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ valueWithinBounds(value: double, lowerBound: double, upperBound: double): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Saab951385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Saab95</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   turboOn: boolean [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ speedFactor(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Scania1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Scania</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   trailerAngle: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ lowerTrailer(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lowerTrailer()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ raiseTrailer(amount: double)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TrailerTruck1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TrailerTruck</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ decrementSpeed(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ incrementSpeed(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ speedFactor(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Transporter1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Transporter</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   isTrailerRaised: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   load: Deque&lt;Car&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- isCarCloseEnough(car: Car): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- isCarTooBig(car: Car): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ loadCar(car: Car)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ lowerTrailer()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ move()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ raiseTrailer()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ unloadCar()</TD></TR>
+<TR><TD ALIGN="LEFT" >- updateLoadPosition()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Vehicle1385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Vehicle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   color: Color [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   enginePower: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   modelName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nrDoors: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ brake(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ decrementSpeed(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ gas(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ incrementSpeed(amount: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ invertDirection()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ speedFactor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ startEngine()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ stopEngine()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Volvo2401385058037[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Volvo240</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ speedFactor(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_3619493 { 
+   	label=view
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CarController44416893[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CarController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   cars: List&lt;Vehicle&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   delay: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   frame: CarView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   timer: Timer [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># brake(amount: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># gas(amount: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># lowerBed()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" ># raiseBed()</TD></TR>
+<TR><TD ALIGN="LEFT" ># startEngine()</TD></TR>
+<TR><TD ALIGN="LEFT" ># stopEngine()</TD></TR>
+<TR><TD ALIGN="LEFT" ># turboOff()</TD></TR>
+<TR><TD ALIGN="LEFT" ># turboOn()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+CarView44416893[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CarView</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   brakeButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   carC: CarController [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   controlPanel: JPanel [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   drawPanel: DrawPanel [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gasAmount: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gasButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gasLabel: JLabel [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gasPanel: JPanel [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gasSpinner: JSpinner [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   liftBedButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   lowerBedButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   startButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   stopButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   turboOffButton: JButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   turboOnButton: JButton [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- initComponents(title: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+DrawPanel44416893[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DrawPanel</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   drawables: List&lt;Drawable&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   saabImage: BufferedImage [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   scaniaImage: BufferedImage [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   volvoImage: BufferedImage [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getImage(fileName: String): BufferedImage</TD></TR>
+<TR><TD ALIGN="LEFT" >- getImageFromDrawable(drawable: Drawable): BufferedImage</TD></TR>
+<TR><TD ALIGN="LEFT" ># isInsideDrawPanel(d: Drawable, x: int, y: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" ># moveit(d: Drawable, x: int, y: int)</TD></TR>
+<TR><TD ALIGN="LEFT" ># paintComponent(g: Graphics)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Drawable44416893[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Drawable</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   point: Point [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+AbstractMovable1385058037 -> Transporter1385058037[label="move() -> move()"];
+AbstractMovable1385058037 -> Vehicle1385058037[arrowhead=none, arrowtail=empty, dir=both];
+CarController44416893 -> CarView44416893[label="frame
+[0..1]"];
+CarController44416893 -> Vehicle1385058037[label="cars
+[0..*]"];
+CarView44416893 -> CarController44416893[label="carC
+[0..1]"];
+CarView44416893 -> DrawPanel44416893[label="drawPanel
+[0..1]"];
+DrawPanel44416893 -> Drawable44416893[label="drawables
+[0..*]"];
+TrailerTruck1385058037 -> Scania1385058037[arrowhead=none, arrowtail=empty, dir=both];
+TrailerTruck1385058037 -> Transporter1385058037[arrowhead=none, arrowtail=empty, dir=both];
+Transporter1385058037 -> AbstractMovable1385058037[label="move() -> move()"];
+Transporter1385058037 -> Car1385058037[label="load
+[0..*]"];
+Vehicle1385058037 -> Car1385058037[arrowhead=none, arrowtail=empty, dir=both];
+Vehicle1385058037 -> Saab951385058037[label="speedFactor() -> speedFactor()"];
+Vehicle1385058037 -> TrailerTruck1385058037[arrowhead=none, arrowtail=empty, dir=both];
+Vehicle1385058037 -> Volvo2401385058037[label="speedFactor() -> speedFactor()"];
+    
+}
+@enduml

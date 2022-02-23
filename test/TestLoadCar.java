@@ -1,3 +1,7 @@
+import application.model.AbstractMovable;
+import application.model.Car;
+import application.model.Saab95;
+import application.model.Transporter;
 import org.junit.Before;
 import org.junit.Test;
 

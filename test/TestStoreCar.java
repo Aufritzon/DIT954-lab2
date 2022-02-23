@@ -1,3 +1,6 @@
+import application.model.AbstractMovable;
+import application.model.Saab95;
+import application.model.Workshop;
 import org.junit.Before;
 import org.junit.Test;
 

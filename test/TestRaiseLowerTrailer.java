@@ -1,3 +1,5 @@
+import application.model.AbstractMovable;
+import application.model.Scania;
 import org.junit.Before;
 import org.junit.Test;
 
