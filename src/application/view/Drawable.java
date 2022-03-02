@@ -2,14 +2,14 @@ package application.view;
 
 import java.awt.*;
 
+
 public class Drawable {
     private final Point point;
     private final String name;
 
-
-    public Drawable(String name, int x, int y) {
+    public Drawable(String name, Point point) {
         this.name = name;
-        point = new Point(x, y);
+        this.point = point;
     }
 
     public String getName() {

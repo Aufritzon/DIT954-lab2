@@ -1,5 +1,8 @@
 package application.view;
 
+import application.model.Position;
+import application.model.WorldObserver;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -10,7 +13,7 @@ import java.util.List;
 
 // This panel represent the animated part of the application.application.view with the car images.
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements WorldObserver {
 
     private static final String IMAGE_DIR = "/application/view/pics/";
 
@@ -18,24 +21,17 @@ public class DrawPanel extends JPanel{
     BufferedImage volvoImage;
     BufferedImage scaniaImage;
 
-    private final List<Drawable> drawables;
+    private List<Drawable> drawables;
+
+
+    private List<String> names;
+
+    private List<Position> positions;
+
 
     void moveit(Drawable d, int x, int y){
         d.getPoint().x = x;
         d.getPoint().y = y;
-    }
-
-    boolean isInsideDrawPanel(Drawable d, int x, int y) {
-        BufferedImage image = getImageFromDrawable(d);
-        int maxX = x + image.getWidth();
-        int maxY = y + image.getHeight();
-
-        boolean isAbove = y < 0;
-        boolean isBelow = maxY > this.getHeight();
-        boolean isRightOff = maxX > this.getWidth();
-        boolean isLeftOff = x < 0;
-
-        return !(isAbove | isBelow | isRightOff | isLeftOff );
     }
 
     // Initializes the panel and reads the images
@@ -61,9 +57,11 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for (Drawable d : drawables) {
-            BufferedImage image = getImageFromDrawable(d);
-            g.drawImage(image, d.getPoint().x, d.getPoint().y, null);
+        Position pos;
+        for (int i = 0; i < names.size(); i++) {
+            pos = positions.get(i);
+            BufferedImage image = getImageFromName(names.get(i));
+            g.drawImage(image, (int)Math.round(pos.getX()), (int) Math.round(pos.getY()), null);
         }
 
     }
@@ -71,6 +69,18 @@ public class DrawPanel extends JPanel{
     private BufferedImage getImageFromDrawable(Drawable drawable) {
         BufferedImage image = null;
         switch (drawable.getName()) {
+            case "Volvo240" -> image = volvoImage;
+            case "Saab95" -> image = saabImage;
+            case "Scania" -> image = scaniaImage;
+            default -> {
+            }
+        }
+        return image;
+    }
+
+    private BufferedImage getImageFromName(String name) {
+        BufferedImage image = null;
+        switch (name) {
             case "Volvo240" -> image = volvoImage;
             case "Saab95" -> image = saabImage;
             case "Scania" -> image = scaniaImage;
@@ -92,5 +102,11 @@ public class DrawPanel extends JPanel{
         }
         image = ImageIO.read(inStream);
         return image;
+    }
+
+    @Override
+    public void actOnWorld(List<String> names, List<Position> positions) {
+        this.names = names;
+        this.positions = positions;
     }
 }

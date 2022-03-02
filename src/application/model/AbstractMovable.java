@@ -7,6 +7,7 @@ package application.model;
  */
 public abstract class AbstractMovable implements Movable {
 
+    private Position position;
     private double x;
     private double y;
     private Direction dir;
@@ -19,24 +20,34 @@ public abstract class AbstractMovable implements Movable {
     public AbstractMovable(double x, double y, Direction dir, double currentSpeed) {
         this.x = x;
         this.y = y;
+        this.position = new Position(x, y);
         this.dir = dir;
         this.currentSpeed = currentSpeed;
     }
 
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
     public double getX() {
-        return x;
+        return position.getX();
     }
 
     public double getY() {
-        return y;
+        return position.getY();
     }
 
     public void setX(double x) {
-        this.x = x;
+        this.position.setX(x);
     }
 
     public void setY(double y) {
-        this.y = y;
+        this.position.setY(y);
     }
 
     public Direction getDir() {
@@ -60,10 +71,10 @@ public abstract class AbstractMovable implements Movable {
     @Override
     public void move() {
         switch (dir) {
-            case NORTH -> y -= currentSpeed;
-            case SOUTH -> y += currentSpeed;
-            case EAST -> x += currentSpeed;
-            case WEST -> x -= currentSpeed;
+            case NORTH -> setY(getY() - currentSpeed);
+            case SOUTH -> setY(getY() + currentSpeed);
+            case EAST -> setX(getX() + currentSpeed);
+            case WEST -> setX(getX() -currentSpeed);
         }
     }
 

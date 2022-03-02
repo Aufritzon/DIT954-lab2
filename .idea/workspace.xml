@@ -2,15 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/AbstractMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/AbstractMovable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/view/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/view/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/view/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/view/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/Drawable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -27,6 +49,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -40,13 +63,39 @@
       <recent name="G:\My Drive\Universitet\Datavetenskap\2022\VT\LP1\DIT954\Labs\DIT954-lab2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.model.Application" />
+      <module name="DIT954-lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value=".CarController" />
       <module name="DIT954-lab2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="application.view.*" />
+          <option name="PATTERN" value="application.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.view.CarController" />
+      <module name="DIT954-lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -56,6 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.CarController (1)" />
         <item itemvalue="Application.CarController" />
       </list>
     </recent_temporary>
@@ -70,6 +121,7 @@
       <updated>1645617216676</updated>
       <workItem from="1645617222754" duration="4535000" />
       <workItem from="1645621789979" duration="4450000" />
+      <workItem from="1646212868049" duration="18332000" />
     </task>
     <servers />
   </component>
@@ -86,5 +138,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/application/model/Application.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

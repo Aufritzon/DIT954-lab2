@@ -1,5 +1,9 @@
 package application.view;
 
+import application.model.Position;
+import application.model.World;
+import application.model.WorldObserver;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -16,14 +20,15 @@ import java.util.List;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class CarView extends JFrame{
+public class CarView extends JFrame {
     private static final int X = 800;
     private static final int Y = 800;
 
+    World world = new World();
     // The controller member
     CarController carC;
 
-    DrawPanel drawPanel;
+    public DrawPanel drawPanel;
 
     JPanel controlPanel = new JPanel();
 
@@ -175,6 +180,4 @@ public class CarView extends JFrame{
         // Make sure the frame exits when "x" is pressed
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-
 }

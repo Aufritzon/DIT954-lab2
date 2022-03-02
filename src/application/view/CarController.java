@@ -25,34 +25,27 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
-    List<application.model.Vehicle> cars = new ArrayList<>();
+    World world;
 
     //methods:
 
-    public static void main(String[] args) {
-        // Instance of this class
-        CarController cc = new CarController();
 
-        List<Drawable> drawables = new ArrayList<>();
+    public CarView getFrame() {
+        return frame;
+    }
 
-        List<Vehicle> vehicles = List.of(
-                new Volvo240(0, 0, AbstractMovable.Direction.EAST),
-                new Saab95(0, 100, AbstractMovable.Direction.EAST) ,
-                new Scania(0, 200, AbstractMovable.Direction.EAST)
-        );
+    public void setWorld(World world) {
+        this.world = world;
+    }
 
-        for (Vehicle v : vehicles) {
-            Drawable d = new Drawable(v.getModelName(), (int)(Math.round(v.getX())), (int)(Math.round(v.getY())));
-            drawables.add(d);
-        }
 
-        cc.cars.addAll(vehicles);
 
-        // Start a new application.application.view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc, drawables);
+    public void setFrame(CarView frame) {
+        this.frame = frame;
+    }
 
-        // Start the timer
-        cc.timer.start();
+    public void startTimer() {
+        timer.start();
     }
 
     /* Each step the TimerListener moves all the cars in the list and tells the
@@ -60,99 +53,50 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            Vehicle v;
-            Drawable d;
-            for (int i = 0 ; i < cars.size(); i++) {
-                v = cars.get(i);
-                d = frame.drawPanel.getDrawables().get(i);
-
-                int x1 = toInt(v.getX());
-                int y1 = toInt(v.getY());
-
-                v.move();
-
-                int x2 = toInt(v.getX());
-                int y2 = toInt(v.getY()) ;
-
-                if(frame.drawPanel.isInsideDrawPanel(d, x2, y2)) {
-                    frame.drawPanel.moveit(d, x2, y2);
-                } else {
-                    v.setX(x1);
-                    v.setY(y1);
-                    v.invertDirection();
-                }
-                frame.drawPanel.repaint();
-            }
+            world.moveVehicles();
+            frame.drawPanel.repaint();
         }
+
         private int toInt (double d) {
            return (int) Math.round(d);
         }
     }
 
-    // Calls the gas method for each car once
-    void gas(int amount) {
-        double gas = ((double) amount) / 100;
-        for (Vehicle car : cars
-                ) {
-            car.gas(gas);
-        }
+
+    public void gas(int amount) {
+        world.gasVehicles(amount);
     }
 
-    void brake(int amount) {
-        double brake = ((double) amount) / 100;
-        for (Vehicle car : cars
-        ) {
-            car.brake(brake);
-        }
+    public void brake(int amount) {
+        world.brakeVehicles(amount);
     }
 
-    void startEngine() {
-        for (Vehicle car : cars
-        ) {
-            car.startEngine();
-        }
+    public void startEngine() {
+        world.startVehicles();
     }
 
-    void stopEngine() {
-        for (Vehicle car : cars
-        ) {
-            car.stopEngine();
-        }
+    public void stopEngine() {
+        world.stopVehicles();
     }
 
-    void lowerBed() {
-        for (Vehicle car : cars
-        ) {
-            if (car instanceof Scania){
-                ((Scania) car).lowerTrailer();
-            }
-        }
+    public void lowerBed() {
+        world.lowerBeds();
     }
 
-    void raiseBed() {
-        for (Vehicle car : cars
-        ) {
-            if (car instanceof Scania){
-                ((Scania) car).raiseTrailer(70);
-            }
-        }
+    public void raiseBed() {
+        world.raiseBeds();
     }
 
-    void turboOn() {
-        for (Vehicle car : cars
-        ) {
-            if (car instanceof Saab95){
-                ((Saab95) car).setTurboOn();
-            }
-        }
+    public void turboOn() {
+        world.turnOnTurbos();
     }
 
-    void turboOff() {
-        for (Vehicle car : cars
-        ) {
-            if (car instanceof Saab95){
-                ((Saab95) car).setTurboOff();
-            }
-        }
+    public void turboOff()  {
+        world.turnOffTurbos();
     }
+
+
+
+
+
 }
