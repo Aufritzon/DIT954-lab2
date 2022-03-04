@@ -1,11 +1,11 @@
-package application.view;
+package application.controller;
 
 import application.model.*;
+import application.view.CarView;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -13,7 +13,7 @@ import java.util.List;
 * modifying the application.application.model state and the updating the application.application.view.
  */
 
-public class CarController {
+public class CarController implements ICarController {
     // member fields:
 
     // The delay (ms) corresponds to 20 updates a sec (hz)
@@ -23,29 +23,21 @@ public class CarController {
     private Timer timer = new Timer(delay, new TimerListener());
 
     // The frame that represents this instance View of the MVC pattern
-    CarView frame;
+    CarView frame =  new CarView("CarSim 1.0", this);
     // A list of cars, modify if needed
     World world;
 
     //methods:
 
-
-    public CarView getFrame() {
-        return frame;
-    }
-
-    public void setWorld(World world) {
-        this.world = world;
-    }
-
-
-
-    public void setFrame(CarView frame) {
-        this.frame = frame;
-    }
-
+    @Override
     public void startTimer() {
         timer.start();
+    }
+
+    @Override
+    public void setWorld(World world) {
+        this.world = world;
+        world.addObserver(frame);
     }
 
     /* Each step the TimerListener moves all the cars in the list and tells the
@@ -54,14 +46,9 @@ public class CarController {
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             world.moveVehicles();
-            frame.drawPanel.repaint();
-        }
-
-        private int toInt (double d) {
-           return (int) Math.round(d);
+            frame.repaintDrawPanel();
         }
     }
-
 
     public void gas(int amount) {
         world.gasVehicles(amount);
@@ -94,9 +81,5 @@ public class CarController {
     public void turboOff()  {
         world.turnOffTurbos();
     }
-
-
-
-
 
 }

@@ -1,40 +1,20 @@
 package application.model;
 
-import application.view.CarController;
-import application.view.DrawPanel;
-import application.view.Drawable;
-
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
-public class World {
-    private static final String IMAGE_DIR = "/application/view/pics/";
-
-
+public class World implements WorldObservable{
     private List<Vehicle> vehicles = new ArrayList<>();
-    private List<? extends IPositionable> positionables;
     private List<WorldObserver> observers = new ArrayList<>();
-    private final Map<IPositionable,BufferedImage> positionalImageMap = new HashMap<>();
     public final static int WORLD_WIDTH = 800;
     public final static int WORLD_HEIGHT = 460;
 
-    public World(WorldObserver observer) {
+    public World() {
         vehicles.add(new Volvo240(0, 0, AbstractMovable.Direction.EAST));
         vehicles.add(new Saab95(0, 100, AbstractMovable.Direction.EAST));
         vehicles.add(new Scania(0, 200, AbstractMovable.Direction.EAST));
-        this.observers.add(observer);
-        updateWorldObservers();
-    }
-
-    private Point posToPoint (Position pos) {
-        return new Point((int) Math.round(pos.getX()),  (int) Math.round(pos.getX()));
     }
 
     public void keepInsideWorld(Vehicle v) {
@@ -45,11 +25,21 @@ public class World {
         }
     }
 
+    @Override
+    public void addObserver(WorldObserver observer) {
+        observers.add(observer);
+        observer.update(this);
+    }
 
-    private boolean isInsideWorld(Vehicle v) {
-        double x = v.getPosition().getX();
-        double y = v.getPosition().getY();
-        BufferedImage image = v.getImage();
+    @Override
+    public void removeObserver(WorldObserver observer) {
+        observers.remove(observer);
+    }
+
+    private boolean isInsideWorld(IPositionable p) {
+        double x = p.getPosition().getX();
+        double y = p.getPosition().getY();
+        BufferedImage image = p.getImage();
         double maxX = x + image.getWidth();
         double maxY = y + image.getHeight();
 
@@ -61,31 +51,21 @@ public class World {
         return !(isAbove | isBelow | isRightOff | isLeftOff );
     }
 
-    public World(List<Vehicle> vehicles, List<WorldObserver> observers) {
-        this.vehicles = vehicles;
+    @Override
+    public Map<Image, Point> getImagePointMap() {
+        Map<Image,Point> imagePointMap = new HashMap<>();
+        for (IPositionable p : vehicles) {
+            imagePointMap.put(p.getImage(),posToPoint(p.getPosition()));
+        }
+        return imagePointMap;
     }
 
-
-
-    public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles = vehicles;
-    }
-
-    public void addVehicle(Vehicle vehicle) {
-        vehicles.add(vehicle);
-    }
-
-    public Iterable<Vehicle> getVehicles() {
-        return vehicles;
-    }
-
-    public void setObservers(List<WorldObserver> observers) {
-        this.observers = observers;
+    private Point posToPoint (Position pos) {
+        return new Point((int) Math.round(pos.getX()),  (int) Math.round(pos.getY()));
     }
 
     private void updateWorldObservers(){
-        positionables = vehicles;
-        for (WorldObserver o : observers) o.actOnWorld(positionables);
+        for (WorldObserver o : observers) o.update(this);
     }
 
     public void moveVehicles(){
@@ -94,7 +74,6 @@ public class World {
             keepInsideWorld(v);
         }
         updateWorldObservers();
-
     }
 
     public void stopVehicles() {
@@ -157,15 +136,4 @@ public class World {
             }
         }
     }
-
-    public BufferedImage getImage(String fileName) throws IOException {
-        BufferedImage image;
-        InputStream inStream = getClass().getResourceAsStream(IMAGE_DIR + fileName);
-        if (inStream == null) {
-            throw new IllegalArgumentException("Image is missing: " + IMAGE_DIR + fileName);
-        }
-        image = ImageIO.read(inStream);
-        return image;
-    }
-
 }

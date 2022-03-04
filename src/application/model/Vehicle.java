@@ -5,6 +5,7 @@ import application.view.DrawPanel;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -116,19 +117,12 @@ public abstract class Vehicle extends AbstractMovable{
 
     public void setImage(String fileName) {
         String image_dir = "/application/view/pics/";
-        BufferedImage image = null;
-        InputStream inStream = DrawPanel.class.getResourceAsStream(image_dir + fileName);
-        if (inStream == null) {
-            throw new IllegalArgumentException("Image is missing: " + image_dir + fileName);
-        }
         try {
-            image = ImageIO.read(inStream);
+            image = ImageIO.read(getClass().getResourceAsStream(image_dir + fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.image = image;
     }
-
 
     public void setBoundedSpeed(double speed) {
             setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));

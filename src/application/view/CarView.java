@@ -1,7 +1,7 @@
 package application.view;
 
-import application.model.Position;
-import application.model.World;
+import application.controller.CarController;
+import application.model.WorldObservable;
 import application.model.WorldObserver;
 
 import javax.swing.*;
@@ -10,7 +10,7 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents the full application.application.view of the MVC pattern of your car simulator.
@@ -20,12 +20,14 @@ import java.util.List;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class CarView extends JFrame {
+public class CarView extends JFrame implements WorldObserver {
     private static final int X = 800;
     private static final int Y = 800;
 
     // The controller member
     CarController carC;
+
+    Map<Image,Point> imagePointMap;
 
     public DrawPanel drawPanel;
 
@@ -179,4 +181,15 @@ public class CarView extends JFrame {
         // Make sure the frame exits when "x" is pressed
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+    public void repaintDrawPanel() {
+        drawPanel.repaint();
+
+    }
+
+    @Override
+    public void update(WorldObservable observable) {
+        drawPanel.setImagePointMap(observable.getImagePointMap());
+    }
+
 }
