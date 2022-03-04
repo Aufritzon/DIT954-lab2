@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/AbstractMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/AbstractMovable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/WorldObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/WorldObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/DrawPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/Drawable.java" afterDir="false" />
@@ -18,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -106,7 +111,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.CarController (1)" />
         <item itemvalue="Application.CarController" />
       </list>
     </recent_temporary>
@@ -122,6 +126,7 @@
       <workItem from="1645617222754" duration="4535000" />
       <workItem from="1645621789979" duration="4450000" />
       <workItem from="1646212868049" duration="18332000" />
+      <workItem from="1646292941552" duration="16449000" />
     </task>
     <servers />
   </component>
@@ -138,16 +143,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/application/model/Application.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

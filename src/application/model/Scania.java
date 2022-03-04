@@ -1,6 +1,7 @@
 package application.model;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 
 /**
@@ -26,6 +27,7 @@ public class Scania extends TrailerTruck {
      */
     public Scania(double x, double y, Direction dir) {
         super(x, y, dir, 0, 2, Color.BLUE, "Scania", 100);
+        setImage("Scania.jpg");
     }
 
     /**
@@ -78,6 +80,5 @@ public class Scania extends TrailerTruck {
     public double getTrailerAngle() {
         return trailerAngle;
     }
-
 
 }

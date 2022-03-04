@@ -1,6 +1,12 @@
 package application.model;
 
+import application.view.DrawPanel;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * implemented by car and trailertruck. Holds all common traits and all common functionality between them
@@ -11,6 +17,7 @@ public abstract class Vehicle extends AbstractMovable{
     private Color color; // Color of the car
     private final String modelName; // The car application.application.model name
     private final double enginePower;
+    private BufferedImage image;
 
     /**
      * constructor for application.application.model.Vehicle
@@ -31,6 +38,7 @@ public abstract class Vehicle extends AbstractMovable{
         this.color = color;
         this.modelName = modelName;
         this.enginePower = enginePower;
+        this.image = null;
     }
 
     /**
@@ -81,7 +89,6 @@ public abstract class Vehicle extends AbstractMovable{
     public void invertDirection() {
         turnRight();
         turnRight();
-        startEngine();
     }
 
     public void stopEngine() {
@@ -101,6 +108,27 @@ public abstract class Vehicle extends AbstractMovable{
     public abstract void decrementSpeed(double amount);
 
     public abstract double speedFactor();
+
+    @Override
+    public BufferedImage getImage() {
+        return image;
+    }
+
+    public void setImage(String fileName) {
+        String image_dir = "/application/view/pics/";
+        BufferedImage image = null;
+        InputStream inStream = DrawPanel.class.getResourceAsStream(image_dir + fileName);
+        if (inStream == null) {
+            throw new IllegalArgumentException("Image is missing: " + image_dir + fileName);
+        }
+        try {
+            image = ImageIO.read(inStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.image = image;
+    }
+
 
     public void setBoundedSpeed(double speed) {
             setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));

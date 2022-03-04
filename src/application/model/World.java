@@ -1,37 +1,61 @@
 package application.model;
 
+import application.view.CarController;
 import application.view.DrawPanel;
 import application.view.Drawable;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class World {
     private static final String IMAGE_DIR = "/application/view/pics/";
 
-    private List<Vehicle> vehicles;
-    private List<WorldObserver> observers;
+
+    private List<Vehicle> vehicles = new ArrayList<>();
+    private List<? extends IPositionable> positionables;
+    private List<WorldObserver> observers = new ArrayList<>();
+    private final Map<IPositionable,BufferedImage> positionalImageMap = new HashMap<>();
     public final static int WORLD_WIDTH = 800;
     public final static int WORLD_HEIGHT = 460;
 
+    public World(WorldObserver observer) {
+        vehicles.add(new Volvo240(0, 0, AbstractMovable.Direction.EAST));
+        vehicles.add(new Saab95(0, 100, AbstractMovable.Direction.EAST));
+        vehicles.add(new Scania(0, 200, AbstractMovable.Direction.EAST));
+        this.observers.add(observer);
+        updateWorldObservers();
+    }
 
-    boolean isInsideWorld(String s, int x, int y) {
-        BufferedImage image = null;
-        try {
-            image = getImage(s);
-        } catch (IOException e) {
-            e.printStackTrace();
+    private Point posToPoint (Position pos) {
+        return new Point((int) Math.round(pos.getX()),  (int) Math.round(pos.getX()));
+    }
+
+    public void keepInsideWorld(Vehicle v) {
+        if (!isInsideWorld(v)) {
+            v.invertDirection();
+            v.move();
+            v.startEngine();
         }
-        int maxX = x + image.getWidth();
-        int maxY = y + image.getHeight();
+    }
+
+
+    private boolean isInsideWorld(Vehicle v) {
+        double x = v.getPosition().getX();
+        double y = v.getPosition().getY();
+        BufferedImage image = v.getImage();
+        double maxX = x + image.getWidth();
+        double maxY = y + image.getHeight();
 
         boolean isAbove = y < 0;
-        boolean isBelow = maxY > this.getHeight();
-        boolean isRightOff = maxX > this.getWidth();
+        boolean isBelow = maxY > WORLD_HEIGHT;
+        boolean isRightOff = maxX > WORLD_WIDTH;
         boolean isLeftOff = x < 0;
 
         return !(isAbove | isBelow | isRightOff | isLeftOff );
@@ -41,10 +65,7 @@ public class World {
         this.vehicles = vehicles;
     }
 
-    public World() {
-        vehicles = new ArrayList<>();
-        observers = new ArrayList<>();
-    }
+
 
     public void setVehicles(List<Vehicle> vehicles) {
         this.vehicles = vehicles;
@@ -63,19 +84,14 @@ public class World {
     }
 
     private void updateWorldObservers(){
-        List<Integer> names = new ArrayList<>();
-        List<Position> positions = new ArrayList<>();
-        for (Vehicle v : vehicles) {
-            names.add(v.hashCode());
-            positions.add(v.getPosition());
-        }
-        for (WorldObserver o : observers) o.actOnWorld(names, positions);
+        positionables = vehicles;
+        for (WorldObserver o : observers) o.actOnWorld(positionables);
     }
 
     public void moveVehicles(){
         for (Vehicle v : vehicles) {
             v.move();
-            updateWorldObservers();
+            keepInsideWorld(v);
         }
         updateWorldObservers();
 
@@ -144,7 +160,7 @@ public class World {
 
     public BufferedImage getImage(String fileName) throws IOException {
         BufferedImage image;
-        InputStream inStream = DrawPanel.class.getResourceAsStream(IMAGE_DIR + fileName);
+        InputStream inStream = getClass().getResourceAsStream(IMAGE_DIR + fileName);
         if (inStream == null) {
             throw new IllegalArgumentException("Image is missing: " + IMAGE_DIR + fileName);
         }

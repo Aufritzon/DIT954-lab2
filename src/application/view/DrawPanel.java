@@ -1,5 +1,6 @@
 package application.view;
 
+import application.model.IPositionable;
 import application.model.Position;
 import application.model.WorldObserver;
 
@@ -21,8 +22,7 @@ public class DrawPanel extends JPanel implements WorldObserver {
     BufferedImage volvoImage;
     BufferedImage scaniaImage;
 
-    private List<Drawable> drawables;
-
+    private List<? extends IPositionable> positionables;
 
     private List<String> names;
 
@@ -35,12 +35,11 @@ public class DrawPanel extends JPanel implements WorldObserver {
     }
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y, List<Drawable> drawables) {
+    public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
 
-        this.drawables = drawables;
 
         try {
             saabImage = getImage("Saab95.jpg");
@@ -57,11 +56,12 @@ public class DrawPanel extends JPanel implements WorldObserver {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Position pos;
-        for (int i = 0; i < names.size(); i++) {
-            pos = positions.get(i);
-            BufferedImage image = getImageFromName(names.get(i));
-            g.drawImage(image, (int)Math.round(pos.getX()), (int) Math.round(pos.getY()), null);
+        IPositionable pos;
+        if (positionables != null) {
+            for (IPositionable positionable : positionables) {
+                pos = positionable;
+                g.drawImage(pos.getImage(), (int) Math.round(pos.getX()), (int) Math.round(pos.getY()), null);
+            }
         }
 
     }
@@ -90,10 +90,6 @@ public class DrawPanel extends JPanel implements WorldObserver {
         return image;
     }
 
-    public List<Drawable> getDrawables() {
-        return drawables;
-    }
-
     public BufferedImage getImage(String fileName) throws IOException {
         BufferedImage image;
         InputStream inStream = DrawPanel.class.getResourceAsStream(IMAGE_DIR + fileName);
@@ -105,8 +101,7 @@ public class DrawPanel extends JPanel implements WorldObserver {
     }
 
     @Override
-    public void actOnWorld(List<String> names, List<Position> positions) {
-        this.names = names;
-        this.positions = positions;
+    public void actOnWorld(List<? extends IPositionable> positionables) {
+        this.positionables = positionables;
     }
 }

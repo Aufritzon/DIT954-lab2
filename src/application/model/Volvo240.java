@@ -1,6 +1,7 @@
 package application.model;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 /**
  * application.application.model.Volvo240 is used to create a new volvo object. It is initialized with its position (x, y), and direction. All its other
@@ -13,11 +14,13 @@ public class Volvo240 extends Car {
 
     public Volvo240(double x, double y, Direction dir){
         super(x,  y, dir, 0, 4, Color.BLACK, "Volvo240", 100, 2);
+        setImage("Volvo240.jpg");
     }
 
     @Override
     public double speedFactor(){
         return getEnginePower() * 0.01 * trimFactor;
     }
+
 
 }

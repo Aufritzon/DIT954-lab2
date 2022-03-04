@@ -12,31 +12,22 @@ public class Application {
     public static void main(String[] args) {
         // Instance of this class
 
-        World world = new World();
 
 
         CarController cc = new CarController();
 
-        List<Drawable> drawables = new ArrayList<>();
-
-        List<Vehicle> vehicles = List.of(
-                new Volvo240(0, 0, AbstractMovable.Direction.EAST),
-                new Saab95(0, 100, AbstractMovable.Direction.EAST) ,
-                new Scania(0, 200, AbstractMovable.Direction.EAST)
-        );
-
-        for (Vehicle v : vehicles) {
-            Drawable d = new Drawable(v.getModelName(), new Point((int)(Math.round(v.getX())), (int)(Math.round(v.getY()))));
-            drawables.add(d);
-        }
-
-        world.setVehicles(vehicles);
-        cc.setWorld(world);
 
         // Start a new application.application.view and send a reference of self
-        cc.setFrame(new CarView("CarSim 1.0", cc, drawables));
+        cc.setFrame(new CarView("CarSim 1.0", cc));
 
-        world.setObservers(List.of(cc.getFrame().drawPanel));
+        World world = new World(cc.getFrame().drawPanel);
+
+
+        List<Drawable> drawables = new ArrayList<>();
+
+        cc.setWorld(world);
+
+
 
         // Start the timer
         cc.startTimer();

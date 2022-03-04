@@ -5,7 +5,7 @@ package application.model;
  *
  * @see AbstractMovable
  */
-public interface Movable {
+public interface Movable extends IPositionable {
 
     void move();
 
