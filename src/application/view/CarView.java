@@ -24,9 +24,6 @@ public class CarView extends JFrame implements WorldObserver {
     private static final int X = 800;
     private static final int Y = 800;
 
-    // The controller member
-    CarController carC;
-
     Map<Image,Point> imagePointMap;
 
     public DrawPanel drawPanel;
@@ -49,8 +46,7 @@ public class CarView extends JFrame implements WorldObserver {
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarView(String framename, CarController cc){
-        this.carC = cc;
+    public CarView(String framename){
         drawPanel = new DrawPanel(X, Y-240);
         initComponents(framename);
     }
@@ -86,6 +82,15 @@ public class CarView extends JFrame implements WorldObserver {
 
         this.add(gasPanel);
 
+        turboOnButton.setActionCommand("TurboOn");
+        turboOffButton.setActionCommand("TurboOff");
+        liftBedButton.setActionCommand("RaiseBed");
+        lowerBedButton.setActionCommand("LowerBed");
+        stopButton.setActionCommand("Stop");
+        startButton.setActionCommand("Start");
+        gasButton.setActionCommand("Gas");
+        brakeButton.setActionCommand("Brake");
+
         controlPanel.setLayout(new GridLayout(2,4));
 
         controlPanel.add(gasButton, 0);
@@ -110,64 +115,6 @@ public class CarView extends JFrame implements WorldObserver {
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
 
-        // This actionListener is for the gas button only
-        // TODO: Create more for each component as necessary
-        gasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.gas(gasAmount);
-            }
-        });
-
-        brakeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.brake(gasAmount);
-            }
-        });
-
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.startEngine();
-            }
-        });
-
-        stopButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.stopEngine();
-            }
-        });
-
-        lowerBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.lowerBed();
-            }
-        });
-
-        liftBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.raiseBed();
-            }
-        });
-
-        turboOnButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.turboOn();
-            }
-        });
-
-        turboOffButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.turboOff();
-            }
-        });
-
 
         // Make the frame pack all it's components by respecting the sizes if possible.
         this.pack();
@@ -187,9 +134,25 @@ public class CarView extends JFrame implements WorldObserver {
 
     }
 
+    public void registerListeners(ActionListener cc) {
+        gasButton.addActionListener(cc);
+        brakeButton.addActionListener(cc);
+        startButton.addActionListener(cc);
+        stopButton.addActionListener(cc);
+        lowerBedButton.addActionListener(cc);
+        liftBedButton.addActionListener(cc);
+        turboOnButton.addActionListener(cc);
+        turboOffButton.addActionListener(cc);
+    }
+
+    public int getGasAmount() {
+        return gasAmount;
+    }
+
     @Override
     public void update(WorldObservable observable) {
-        drawPanel.setImagePointMap(observable.getImagePointMap());
+        drawPanel.setPositionables(observable.getPositionables());
     }
+
 
 }

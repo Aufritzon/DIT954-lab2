@@ -1,14 +1,19 @@
 package application.view;
 
+
+import application.model.IPositionable;
+
 import java.awt.*;
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Map;
 
 // This panel represent the animated part of the application.application.view with the car images.
 
 public class DrawPanel extends JPanel {
 
-    private Map<Image,Point> imagePointMap;
+    private Iterable<IPositionable> positionables;
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -23,14 +28,12 @@ public class DrawPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Point p;
-            for (Image i : imagePointMap.keySet()) {
-                p = imagePointMap.get(i);
-                g.drawImage(i, p.x, p.y, null);
-            }
+            for (IPositionable p : positionables) {
+                g.drawImage(p.getImage() , (int) p.getX(), (int) p.getY(), null);
+        }
     }
 
-    public void setImagePointMap(Map<Image,Point> imagePointMap) {
-        this.imagePointMap = imagePointMap;
+    public void setPositionables(Iterable<IPositionable> positionables) {
+        this.positionables = positionables;
     }
 }

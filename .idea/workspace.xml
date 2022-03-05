@@ -3,29 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/WorldObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/WorldObserver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarController$TimerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/CarView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controller/ICarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/ICarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/WorldObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/WorldObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/model/WorldObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/WorldObservable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/view/Drawable.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DIT954-lab2-v1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -138,7 +124,9 @@
       <workItem from="1645617222754" duration="4535000" />
       <workItem from="1645621789979" duration="4450000" />
       <workItem from="1646212868049" duration="18332000" />
-      <workItem from="1646292941552" duration="27335000" />
+      <workItem from="1646292941552" duration="27652000" />
+      <workItem from="1646402738190" duration="3904000" />
+      <workItem from="1646479145101" duration="16838000" />
     </task>
     <servers />
   </component>

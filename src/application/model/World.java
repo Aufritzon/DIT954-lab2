@@ -52,12 +52,8 @@ public class World implements WorldObservable{
     }
 
     @Override
-    public Map<Image, Point> getImagePointMap() {
-        Map<Image,Point> imagePointMap = new HashMap<>();
-        for (IPositionable p : vehicles) {
-            imagePointMap.put(p.getImage(),posToPoint(p.getPosition()));
-        }
-        return imagePointMap;
+    public List<IPositionable> getPositionables() {
+        return Collections.unmodifiableList(vehicles);
     }
 
     private Point posToPoint (Position pos) {
