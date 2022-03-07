@@ -1,26 +1,16 @@
 package application.controller;
 
-import application.model.*;
+import application.model.world.World;
 import application.view.CarView;
+import application.view.View;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
 
-/*
-* This class represents the Controller part in the MVC pattern.
-* It's responsibilities is to listen to the View and responds in a appropriate manner by
-* modifying the application.application.model state and the updating the application.application.view.
- */
+public class CarController {
 
-public class CarController implements ActionListener {
-    // member fields:
-
-
-    // A list of cars, modify if needed
-    World world;
-
+    WorldModel world;
     CarView frame;
 
     public CarController(World world, CarView frame) {
@@ -28,29 +18,29 @@ public class CarController implements ActionListener {
         this.frame = frame;
     }
 
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() != null) {
-            switch (e.getActionCommand()) {
-                case "Gas" -> world.gasVehicles(frame.getGasAmount());
-                case "Brake" -> world.brakeVehicles(frame.getGasAmount());
-                case "TurboOn" -> world.turnOnTurbos();
-                case "TurboOff" -> world.turnOffTurbos();
-                case "RaiseBed" -> world.raiseBeds();
-                case "LowerBed" -> world.lowerBeds();
-                case "Start" -> world.startVehicles();
-                case "Stop" -> world.stopVehicles();
-            }
-        } else {
-            world.moveVehicles();
-            frame.repaintDrawPanel();
-        }
+    public void initController(){
+        frame.addGasListener(e -> world.gasVehicles(frame.getGasAmount()));
+        frame.addBrakeListener(e -> world.brakeVehicles(frame.getGasAmount()));
+        frame.addLiftBedListener(e -> world.raiseBeds());
+        frame.addLowerBedListener(e -> world.lowerBeds());
+        frame.addTurboOnListener(e -> world.turnOnTurbos());
+        frame.addTurboOffListener(e -> world.turnOffTurbos());
+        frame.addStartListener(e -> world.startVehicles());
+        frame.addStopListener(e -> world.stopVehicles());
     }
-    //methods:
 
-    /* Each step the TimerListener moves all the cars in the list and tells the
-    * application.application.view to update its images. Change this method to your needs.
-    * */
+    public void startTimer(int delay) {
+        new Timer(delay,  new TimerListener()).start();
+    }
+
+    private class TimerListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            world.moveVehicles();
+            frame.updateView(world);
+            frame.repaintView();
+        }
+
+    }
 
 }

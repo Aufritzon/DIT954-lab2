@@ -1,6 +1,6 @@
-import application.model.AbstractMovable;
-import application.model.Saab95;
-import application.model.Workshop;
+import application.model.Direction;
+import application.model.vehicles.Saab95;
+import application.model.workshops.Workshop;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class TestStoreCar {
 
     @Before
     public void init() {
-        saab = new Saab95(1, 5, AbstractMovable.Direction.NORTH);
+        saab = new Saab95(1, 5, Direction.NORTH);
         workshop= new Workshop<>(10);
     }
 

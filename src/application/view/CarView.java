@@ -1,16 +1,12 @@
 package application.view;
 
-import application.controller.CarController;
-import application.model.WorldObservable;
-import application.model.WorldObserver;
+import application.model.world.DrawableWorld;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Map;
 
 /**
  * This class represents the full application.application.view of the MVC pattern of your car simulator.
@@ -20,11 +16,9 @@ import java.util.Map;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class CarView extends JFrame implements WorldObserver {
+public class CarView extends JFrame implements View{
     private static final int X = 800;
     private static final int Y = 800;
-
-    Map<Image,Point> imagePointMap;
 
     public DrawPanel drawPanel;
 
@@ -60,8 +54,6 @@ public class CarView extends JFrame implements WorldObserver {
         this.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
 
         this.add(drawPanel);
-
-
 
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
@@ -129,30 +121,43 @@ public class CarView extends JFrame implements WorldObserver {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public void repaintDrawPanel() {
+    public void addGasListener(ActionListener listener) {
+        gasButton.addActionListener(listener);
+    }
+    public void addBrakeListener(ActionListener listener) {
+        brakeButton.addActionListener(listener);
+    }
+    public void addTurboOnListener(ActionListener listener) {
+        turboOnButton.addActionListener(listener);
+    }
+    public void addTurboOffListener(ActionListener listener) {
+        turboOffButton.addActionListener(listener);
+    }
+    public void addStopListener(ActionListener listener) {
+        stopButton.addActionListener(listener);
+    }
+    public void addStartListener(ActionListener listener) {
+        startButton.addActionListener(listener);
+    }
+    public void addLowerBedListener(ActionListener listener) {
+        lowerBedButton.addActionListener(listener);
+    }
+    public void addLiftBedListener(ActionListener listener) {
+        liftBedButton.addActionListener(listener);
+    }
+
+    public void repaintView() {
         drawPanel.repaint();
 
     }
 
-    public void registerListeners(ActionListener cc) {
-        gasButton.addActionListener(cc);
-        brakeButton.addActionListener(cc);
-        startButton.addActionListener(cc);
-        stopButton.addActionListener(cc);
-        lowerBedButton.addActionListener(cc);
-        liftBedButton.addActionListener(cc);
-        turboOnButton.addActionListener(cc);
-        turboOffButton.addActionListener(cc);
+    public void updateView(DrawableWorld world) {
+        drawPanel.updateDrawableWorld(world);
     }
+
 
     public int getGasAmount() {
         return gasAmount;
     }
-
-    @Override
-    public void update(WorldObservable observable) {
-        drawPanel.setPositionables(observable.getPositionables());
-    }
-
 
 }

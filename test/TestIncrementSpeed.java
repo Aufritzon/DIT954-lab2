@@ -1,6 +1,6 @@
-import application.model.AbstractMovable;
-import application.model.Car;
-import application.model.Volvo240;
+import application.model.vehicles.Car;
+import application.model.Direction;
+import application.model.vehicles.Volvo240;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class TestIncrementSpeed {
 
     @Before
     public void init() {
-        volvo = new Volvo240(1, 1, AbstractMovable.Direction.NORTH);
+        volvo = new Volvo240(1, 1, Direction.NORTH);
         volvo.startEngine();
     }
 

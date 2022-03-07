@@ -1,5 +1,5 @@
-import application.model.AbstractMovable;
-import application.model.Saab95;
+import application.model.Direction;
+import application.model.vehicles.Saab95;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,14 +14,14 @@ public class TestTurnRight {
 
     @Before
     public void init() {
-        saab = new Saab95(1, 1, AbstractMovable.Direction.NORTH);
+        saab = new Saab95(1, 1, Direction.NORTH);
         saab.startEngine();
         saab.setTurboOn();
     }
 
     @Test
     public void testFullRotation() {
-        AbstractMovable.Direction d1 = saab.getDir();
+        Direction d1 = saab.getDir();
         saab.turnRight();
         saab.turnRight();
         saab.turnRight();

@@ -1,7 +1,7 @@
 package application.controller;
 
 
-import application.model.World;
+import application.model.world.World;
 
 
 public interface ICarController {

@@ -3,9 +3,9 @@ package application.model;
 /**
  * application.application.model.Movable is implemented by CarMovable.
  *
- * @see AbstractMovable
+ * @see
  */
-public interface Movable extends IPositionable {
+public interface Movable {
 
     void move();
 

@@ -1,7 +1,7 @@
-import application.model.AbstractMovable;
-import application.model.Car;
-import application.model.Saab95;
-import application.model.Transporter;
+import application.model.vehicles.Car;
+import application.model.Direction;
+import application.model.vehicles.Saab95;
+import application.model.vehicles.Transporter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,8 +13,8 @@ public class TestLoadCar {
 
     @Before
     public void init() {
-        saab = new Saab95(1, 5, AbstractMovable.Direction.NORTH);
-        transporter = new Transporter(1, 2, AbstractMovable.Direction.NORTH);
+        saab = new Saab95(1, 5, Direction.NORTH);
+        transporter = new Transporter(1, 2, Direction.NORTH);
         saab.startEngine();
     }
 

@@ -1,19 +1,15 @@
 package application.view;
 
-
-import application.model.IPositionable;
+import application.model.Drawable;
+import application.model.world.DrawableWorld;
 
 import java.awt.*;
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 // This panel represent the animated part of the application.application.view with the car images.
 
 public class DrawPanel extends JPanel {
-
-    private Iterable<IPositionable> positionables;
+    private DrawableWorld DrawableWorld;
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -28,12 +24,15 @@ public class DrawPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-            for (IPositionable p : positionables) {
-                g.drawImage(p.getImage() , (int) p.getX(), (int) p.getY(), null);
+        if(DrawableWorld != null) {
+            for (Drawable d : DrawableWorld.getDrawables()) {
+                g.drawImage(d.getImage(), (int) d.getX(), (int) d.getY(), null);
+            }
         }
     }
 
-    public void setPositionables(Iterable<IPositionable> positionables) {
-        this.positionables = positionables;
+    public void updateDrawableWorld(DrawableWorld DrawableWorld) {
+        this.DrawableWorld = DrawableWorld;
     }
+
 }

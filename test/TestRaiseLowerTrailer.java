@@ -1,5 +1,5 @@
-import application.model.AbstractMovable;
-import application.model.Scania;
+import application.model.Direction;
+import application.model.vehicles.Scania;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class TestRaiseLowerTrailer {
 
     @Before
     public void init() {
-        scania = new Scania(1, 5, AbstractMovable.Direction.NORTH);
+        scania = new Scania(1, 5, Direction.NORTH);
     }
 
     @Test
