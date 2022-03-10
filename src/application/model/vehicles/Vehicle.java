@@ -1,6 +1,7 @@
 package application.model.vehicles;
 
-import application.model.*;
+import application.model.HelperMethods;
+import application.model.Position;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -10,12 +11,12 @@ import java.io.IOException;
 /**
  * implemented by car and trailertruck. Holds all common traits and all common functionality between them
  */
-public abstract class Vehicle implements IVehicle, Drawable {
+public abstract class Vehicle implements IVehicle {
 
     private final int nrDoors; // Number of doors on the car
-    private Color color; // Color of the car
     private final String modelName; // The car application.application.model name
     private final double enginePower;
+    private Color color; // Color of the car
     private BufferedImage image;
     private Position position;
     private Direction dir;
@@ -23,6 +24,7 @@ public abstract class Vehicle implements IVehicle, Drawable {
 
     /**
      * constructor for application.application.model.vehicles.Vehicle
+     *
      * @param x
      * @param y
      * @param dir
@@ -32,8 +34,8 @@ public abstract class Vehicle implements IVehicle, Drawable {
      * @param modelName
      * @param enginePower
      */
-    public Vehicle (double x, double y, Direction dir, double currentSpeed,
-                int nrDoors, Color color, String modelName, double enginePower){
+    public Vehicle(double x, double y, Direction dir, double currentSpeed,
+                   int nrDoors, Color color, String modelName, double enginePower) {
         this.position = new Position(x, y);
         this.dir = dir;
         this.currentSpeed = currentSpeed;
@@ -46,30 +48,34 @@ public abstract class Vehicle implements IVehicle, Drawable {
 
     /**
      * returns the number of doors on the vehicle
+     *
      * @return nrDoors
      */
-    public int getNrDoors(){
+    public int getNrDoors() {
         return nrDoors;
     }
 
     /**
      * returns the color of the vehicle
+     *
      * @return color
      */
-    public Color getColor(){
+    public Color getColor() {
         return color;
     }
 
     /**
      * sets the color of the vehicle
+     *
      * @param color
      */
-    public void setColor(Color color){
+    public void setColor(Color color) {
         this.color = color;
     }
 
     /**
      * returns the application.application.model name of the vehicle
+     *
      * @return modelName
      */
     public String getModelName() {
@@ -78,6 +84,7 @@ public abstract class Vehicle implements IVehicle, Drawable {
 
     /**
      * returns the engine power of the vehicle
+     *
      * @return enginePower
      */
     public double getEnginePower() {
@@ -131,11 +138,8 @@ public abstract class Vehicle implements IVehicle, Drawable {
     }
 
     public void setBoundedSpeed(double speed) {
-            setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));
+        setCurrentSpeed(HelperMethods.valueWithinBounds(speed, 0, getEnginePower()));
     }
-
-
-
 
     @Override
     public Position getPosition() {
@@ -151,13 +155,13 @@ public abstract class Vehicle implements IVehicle, Drawable {
         return position.getX();
     }
 
+    public void setX(double x) {
+        this.position.setX(x);
+    }
+
     @Override
     public double getY() {
         return position.getY();
-    }
-
-    public void setX(double x) {
-        this.position.setX(x);
     }
 
     public void setY(double y) {
@@ -188,7 +192,7 @@ public abstract class Vehicle implements IVehicle, Drawable {
             case NORTH -> setY(getY() - currentSpeed);
             case SOUTH -> setY(getY() + currentSpeed);
             case EAST -> setX(getX() + currentSpeed);
-            case WEST -> setX(getX() -currentSpeed);
+            case WEST -> setX(getX() - currentSpeed);
         }
     }
 

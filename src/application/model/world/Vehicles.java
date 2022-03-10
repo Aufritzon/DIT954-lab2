@@ -1,12 +1,18 @@
 package application.model.world;
 
+import application.model.vehicles.Direction;
 import application.model.vehicles.IVehicle;
 import application.model.vehicles.TrailerVehicle;
 import application.model.vehicles.TurboVehicle;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 
 public class Vehicles {
+    VehicleFactory vehicleFactory = new VehicleFactory();
+
     List<TurboVehicle> turboVehicles = new ArrayList<>();
     List<TrailerVehicle> trailerVehicles = new ArrayList<>();
     List<IVehicle> vehicles = new ArrayList<>();
@@ -27,14 +33,15 @@ public class Vehicles {
     }
 
     public List<TurboVehicle> getTurboVehicles() {
-        return Collections.unmodifiableList(turboVehicles);
+        return turboVehicles;
     }
 
     public List<TrailerVehicle> getTrailerVehicles() {
-        return Collections.unmodifiableList(trailerVehicles);
+        return trailerVehicles;
     }
 
     public List<IVehicle> getVehicles() {
-        return Collections.unmodifiableList(vehicles);
+        return vehicles;
     }
+
 }

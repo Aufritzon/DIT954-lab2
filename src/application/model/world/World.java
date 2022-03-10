@@ -1,20 +1,21 @@
 package application.model.world;
 
-import application.controller.WorldModel;
-import application.model.Direction;
-import application.model.Drawable;
+import application.controller.VehicleModel;
 import application.model.vehicles.*;
+import application.view.IPositionable;
 
 import java.awt.image.BufferedImage;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class World implements WorldModel {
+public class World implements VehicleModel {
 
     private final static int WORLD_WIDTH = 800;
     private final static int WORLD_HEIGHT = WORLD_WIDTH - 240;
 
-    private Vehicles vehicles = new Vehicles();
+    private final List<WorldListener> listeners = new ArrayList<>();
+    private final Vehicles vehicles = new Vehicles();
 
     public World() {
         vehicles.addVehicle(new Volvo240(0, 0, Direction.EAST));
@@ -30,10 +31,10 @@ public class World implements WorldModel {
         }
     }
 
-    private boolean isInsideWorld(Drawable d) {
-        double x = d.getPosition().getX();
-        double y = d.getPosition().getY();
-        BufferedImage image = d.getImage();
+    private boolean isInsideWorld(IPositionable p) {
+        double x = p.getPosition().getX();
+        double y = p.getPosition().getY();
+        BufferedImage image = p.getImage();
         double maxX = x + image.getWidth();
         double maxY = y + image.getHeight();
 
@@ -42,79 +43,86 @@ public class World implements WorldModel {
         boolean isRightOff = maxX > WORLD_WIDTH;
         boolean isLeftOff = x < 0;
 
-        return !(isAbove | isBelow | isRightOff | isLeftOff );
+        return !(isAbove | isBelow | isRightOff | isLeftOff);
     }
 
-    @Override
-    public List<Drawable> getDrawables() {
-        return Collections.unmodifiableList(vehicles.getVehicles());
-    }
-
-    public void moveVehicles(){
+    public void moveVehicles() {
         for (IVehicle v : vehicles.getVehicles()) {
             v.move();
             keepInsideWorld(v);
         }
+        notifyListeners();
     }
 
     @Override
     public void stopVehicles() {
-        for (IVehicle v: vehicles.getVehicles()) v.stopEngine();
+        vehicles.getVehicles().forEach(IVehicle::stopEngine);
     }
 
     @Override
     public void startVehicles() {
-        for (IVehicle v: vehicles.getVehicles()) v.startEngine();
+        vehicles.getVehicles().forEach(IVehicle::startEngine);
     }
 
     @Override
     // Calls the gas method for each car once
     public void gasVehicles(int amount) {
         double gas = ((double) amount) / 100;
-        for (IVehicle v : vehicles.getVehicles()
-        ) {
-            v.gas(gas);
-        }
+        vehicles.getVehicles().forEach(v -> v.gas(gas));
     }
 
     @Override
     public void brakeVehicles(int amount) {
         double brake = ((double) amount) / 100;
-        for (IVehicle v : vehicles.getVehicles()
-        ) {
-            v.brake(brake);
-        }
+        vehicles.getVehicles().forEach(v -> v.brake(brake));
     }
 
     @Override
     public void lowerBeds() {
-        for (TrailerVehicle v : vehicles.getTrailerVehicles()
-        ) {
-            v.lowerTrailer();
-        }
+        vehicles.getTrailerVehicles().forEach(TrailerVehicle::lowerTrailer);
     }
 
     @Override
-    public void raiseBeds() {
-        for (TrailerVehicle v : vehicles.getTrailerVehicles()
-        ) {
-            v.raiseTrailer();
-        }
+    public void liftBeds() {
+        vehicles.getTrailerVehicles().forEach(TrailerVehicle::raiseTrailer);
     }
 
     @Override
     public void turnOnTurbos() {
-        for (TurboVehicle v : vehicles.getTurboVehicles())
-        {
-            v.setTurboOn();
-        }
+        vehicles.getTurboVehicles().forEach(TurboVehicle::setTurboOn);
     }
 
     @Override
     public void turnOffTurbos() {
-        for (TurboVehicle v : vehicles.getTurboVehicles())
-        {
-            v.setTurboOff();
-        }
+        vehicles.getTurboVehicles().forEach(TurboVehicle::setTurboOff);
+    }
+
+    @Override
+    public void addVehicle() {
+
+
+    }
+
+    @Override
+    public void removeVehicle() {
+
+    }
+
+
+
+    private List<IPositionable> getPositionables() {
+        return Collections.unmodifiableList(vehicles.getVehicles());
+    }
+
+    public void addListener(WorldListener listener) {
+        listeners.add(listener);
+    }
+
+    public void removeListener(WorldListener listener) {
+        listeners.remove(listener);
+    }
+
+    private void notifyListeners() {
+        listeners.forEach(l -> l.actOnWorldChange(getPositionables()));
     }
 }

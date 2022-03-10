@@ -1,8 +1,6 @@
 package application.controller;
 
-import application.model.world.DrawableWorld;
-
-public interface WorldModel extends DrawableWorld {
+public interface VehicleModel {
 
     void moveVehicles();
 
@@ -16,10 +14,14 @@ public interface WorldModel extends DrawableWorld {
 
     void lowerBeds();
 
-    void raiseBeds();
+    void liftBeds();
 
     void turnOnTurbos();
 
     void turnOffTurbos();
+
+    void addVehicle();
+
+    void removeVehicle();
 
 }

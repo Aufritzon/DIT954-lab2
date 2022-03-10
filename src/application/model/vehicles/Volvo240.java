@@ -1,7 +1,5 @@
 package application.model.vehicles;
 
-import application.model.Direction;
-
 import java.awt.*;
 
 /**
@@ -13,13 +11,13 @@ public class Volvo240 extends Car {
 
     public final static double trimFactor = 1.25;
 
-    public Volvo240(double x, double y, Direction dir){
-        super(x,  y, dir, 0, 4, Color.BLACK, "Volvo240", 100, 2);
+    public Volvo240(double x, double y, Direction dir) {
+        super(x, y, dir, 0, 4, Color.BLACK, "Volvo240", 100, 2);
         setImage("Volvo240.jpg");
     }
 
     @Override
-    public double speedFactor(){
+    public double speedFactor() {
         return getEnginePower() * 0.01 * trimFactor;
     }
 

@@ -1,6 +1,5 @@
 package application.model.vehicles;
 
-import application.model.Direction;
 import application.model.HelperMethods;
 
 import java.awt.*;
@@ -23,8 +22,9 @@ public class Scania extends TrailerTruck {
 
     /**
      * Constructor for application.application.model.vehicles.Scania object.
-     * @param x x position
-     * @param y y position
+     *
+     * @param x   x position
+     * @param y   y position
      * @param dir direction
      */
     public Scania(double x, double y, Direction dir) {
@@ -34,24 +34,26 @@ public class Scania extends TrailerTruck {
 
     /**
      * Raises the trailer with an amount if the amount falls within a safe interval.
+     *
      * @param amount
      */
 
 
-    public void raiseTrailer (double amount) {
+    public void raiseTrailer(double amount) {
         setSafeTrailerAngle(trailerAngle + amount);
     }
 
     @Override
-    public void raiseTrailer () {
+    public void raiseTrailer() {
         setSafeTrailerAngle(MAX_TRAILER_ANGLE);
     }
 
     /**
      * Lowers the trailer with an amount if the amount falls within a safe interval.
+     *
      * @param amount
      */
-    public void lowerTrailer (double amount){
+    public void lowerTrailer(double amount) {
         setSafeTrailerAngle(trailerAngle - amount);
     }
 
@@ -65,16 +67,18 @@ public class Scania extends TrailerTruck {
 
     /**
      * Sets the trailer angle to a fixed angle.
+     *
      * @param angle
      */
     public void setSafeTrailerAngle(double angle) {
-        if(getCurrentSpeed() == 0) {
-            trailerAngle = HelperMethods.valueWithinBounds(angle, 0 , MAX_TRAILER_ANGLE);
+        if (getCurrentSpeed() == 0) {
+            trailerAngle = HelperMethods.valueWithinBounds(angle, 0, MAX_TRAILER_ANGLE);
         }
     }
 
     /**
      * Checks if the truck is able to drive by checking if the trailer is down.
+     *
      * @return
      */
     @Override
@@ -84,6 +88,7 @@ public class Scania extends TrailerTruck {
 
     /**
      * Returns the current trailer angle
+     *
      * @return
      */
     public double getTrailerAngle() {

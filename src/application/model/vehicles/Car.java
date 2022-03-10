@@ -1,11 +1,9 @@
 package application.model.vehicles;
 
-import application.model.Direction;
-
 import java.awt.*;
 
 /**
- * application.application.model.vehicles.Car handles all common traits among the cars. It stores the information of the cars, such as the number of doors,
+ * application.application.model.vehicles.Vehicle handles all common traits among the cars. It stores the information of the cars, such as the number of doors,
  * color of the car, the application.application.model name, the cars weight and the type of engine the car is using. It contains methods that can be used to
  * retrieve this information but also change some of them.
  * The position, direction and movement is sent to and handled by the superclass {@link }
@@ -25,12 +23,12 @@ public abstract class Car extends Vehicle {
     }
 
     @Override
-    public void incrementSpeed(double amount){
+    public void incrementSpeed(double amount) {
         setBoundedSpeed(getCurrentSpeed() + speedFactor() * amount);
     }
 
     @Override
-    public void decrementSpeed(double amount){
+    public void decrementSpeed(double amount) {
         setBoundedSpeed(getCurrentSpeed() - speedFactor() * amount);
     }
 }

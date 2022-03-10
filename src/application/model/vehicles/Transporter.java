@@ -1,7 +1,5 @@
 package application.model.vehicles;
 
-import application.model.Direction;
-
 import java.awt.*;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -14,12 +12,12 @@ public class Transporter extends TrailerTruck {
     public final static int LOADING_CAPACITY = 10;
     public final static int MIN_DISTANCE_FOR_LOADING = 5;
     public final static double MAX_WEIGHT_PER_CAR = 2.5;
-
-    private boolean isTrailerRaised;
     private final Deque<Car> load = new LinkedList<>();
+    private boolean isTrailerRaised;
 
     /**
      * Constructor for application.application.model.vehicles.Transporter.
+     *
      * @param x
      * @param y
      * @param dir
@@ -31,6 +29,7 @@ public class Transporter extends TrailerTruck {
 
     /**
      * returns all the cars that are currently loaded on the transporter
+     *
      * @return
      */
     public Deque<Car> getLoad() {
@@ -41,19 +40,22 @@ public class Transporter extends TrailerTruck {
      * Raises the trailer ramp.
      */
     @Override
-    public void raiseTrailer(){ isTrailerRaised = true;}
+    public void raiseTrailer() {
+        isTrailerRaised = true;
+    }
 
     /**
      * Lowers the trailer ramp.
      */
     @Override
-    public void lowerTrailer(){
+    public void lowerTrailer() {
         isTrailerRaised = false;
     }
 
     /**
      * Checks if theres room on the transporter for a car then loads the car into the transporter. Sets the position of
      * the car to be the same as the tranporters position.
+     *
      * @param car
      */
     public void loadCar(Car car) {
@@ -77,6 +79,7 @@ public class Transporter extends TrailerTruck {
 
     /**
      * Checks whether the transporter is driveable by checking if the trailer is raised
+     *
      * @return
      */
     @Override
@@ -95,12 +98,16 @@ public class Transporter extends TrailerTruck {
 
     /**
      * checks if the load size is less than the max capacity
+     *
      * @return
      */
-    private boolean isRoomOnTrailer() { return load.size() != LOADING_CAPACITY;}
+    private boolean isRoomOnTrailer() {
+        return load.size() != LOADING_CAPACITY;
+    }
 
     /**
      * checks if the car to be loaded is close enough to the transporters position
+     *
      * @param car
      * @return
      */
@@ -111,10 +118,13 @@ public class Transporter extends TrailerTruck {
 
     /**
      * checks if the car is too big by checking that the weight of the car is less than the max weight per car
+     *
      * @param car
      * @return
      */
-    private boolean isCarTooBig(Car car) {return car.getWeight() > MAX_WEIGHT_PER_CAR;}
+    private boolean isCarTooBig(Car car) {
+        return car.getWeight() > MAX_WEIGHT_PER_CAR;
+    }
 
     /**
      * updates the loaded cars position to be in line with the transporters position

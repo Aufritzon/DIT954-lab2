@@ -1,5 +1,5 @@
 import application.model.vehicles.Car;
-import application.model.Direction;
+import application.model.vehicles.Direction;
 import application.model.vehicles.Volvo240;
 import org.junit.Before;
 import org.junit.Test;

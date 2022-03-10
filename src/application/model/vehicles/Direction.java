@@ -1,4 +1,4 @@
-package application.model;
+package application.model.vehicles;
 
 public enum Direction {
     NORTH,

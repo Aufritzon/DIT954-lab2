@@ -8,9 +8,10 @@ import java.util.LinkedList;
 /**
  * Generic type representing car workshops.
  * Can be instantiated for specific car-types or just cars in general.
+ *
  * @param <T>
  */
-public class Workshop <T extends Car> {
+public class Workshop<T extends Car> {
     private final int capacity;
 
     Deque<T> cars = new LinkedList<>();
@@ -21,6 +22,7 @@ public class Workshop <T extends Car> {
 
     /**
      * Returns the maximum number of cars that can be stored in the workshop.
+     *
      * @return
      */
     public int getCapacity() {
@@ -29,9 +31,10 @@ public class Workshop <T extends Car> {
 
     /**
      * Adds another car to the workshop, parked behind the others.
+     *
      * @param car
      */
-    public void storeCar (T car){
+    public void storeCar(T car) {
         if (cars.size() < capacity) {
             cars.push(car);
         }
@@ -39,6 +42,7 @@ public class Workshop <T extends Car> {
 
     /**
      * Gives back the car that was most recently added to the shop.
+     *
      * @return
      */
     public T retrieveCar() {

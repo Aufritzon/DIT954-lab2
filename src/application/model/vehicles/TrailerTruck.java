@@ -1,13 +1,11 @@
 package application.model.vehicles;
 
-import application.model.Direction;
-
 import java.awt.*;
 
 /**
  * Is implemented by the transporter and application.application.model.vehicles.Scania truck. Controls the speed for both of them.
  */
-public abstract class TrailerTruck extends Vehicle implements TrailerVehicle{
+public abstract class TrailerTruck extends Vehicle implements TrailerVehicle {
 
     public TrailerTruck(double x, double y, Direction dir, double currentSpeed,
                         int nrDoors, Color color, String modelName, double enginePower) {
@@ -16,12 +14,14 @@ public abstract class TrailerTruck extends Vehicle implements TrailerVehicle{
 
     /**
      * Each subclass decide when their trailer is in a movable state.
+     *
      * @return
      */
     public abstract boolean isTrailerMovable();
 
     /**
      * Safely increases the speed by an amount.
+     *
      * @param amount
      */
     @Override
@@ -31,6 +31,7 @@ public abstract class TrailerTruck extends Vehicle implements TrailerVehicle{
 
     /**
      * Safely decreases the speed by an amount.
+     *
      * @param amount
      */
     @Override
@@ -40,6 +41,7 @@ public abstract class TrailerTruck extends Vehicle implements TrailerVehicle{
 
     /**
      * Calculates the speed factor from which to calculate the speed.
+     *
      * @return
      */
     @Override
@@ -50,10 +52,11 @@ public abstract class TrailerTruck extends Vehicle implements TrailerVehicle{
     /**
      * Sets the speed as long as the trailer is able to move,
      * and the speed >0 and <= enginePower.
+     *
      * @param speed
      */
     private void setSafeSpeed(double speed) {
-        if(isTrailerMovable()) {
+        if (isTrailerMovable()) {
             setBoundedSpeed(speed);
         }
     }

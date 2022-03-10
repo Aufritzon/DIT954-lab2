@@ -1,4 +1,4 @@
-import application.model.Direction;
+import application.model.vehicles.Direction;
 import application.model.vehicles.Saab95;
 import application.model.workshops.Workshop;
 import org.junit.Before;

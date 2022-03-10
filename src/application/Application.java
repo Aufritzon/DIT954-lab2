@@ -1,25 +1,27 @@
 package application;
 
-import application.controller.CarController;
+import application.controller.MovementController;
+import application.controller.VehicleController;
 import application.model.world.World;
-import application.view.CarView;
+import application.view.VehicleView;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Application {
     public static void main(String[] args) {
 
         World world = new World();
 
-        CarView frame = new CarView("CarSim 1.0");
+        VehicleView frame = new VehicleView("VehicleSim 1.0");
 
-        CarController cc = new CarController(world, frame);
+        MovementController mc = new MovementController(world);
 
-        cc.initController();
+        VehicleController vc = new VehicleController(world);
 
-        cc.startTimer(50);
+        world.addListener(frame);
 
+        frame.addListener(vc);
+
+        new Timer(50, mc).start();
     }
 }

@@ -1,5 +1,5 @@
 import application.model.vehicles.Car;
-import application.model.Direction;
+import application.model.vehicles.Direction;
 import application.model.vehicles.Saab95;
 import application.model.vehicles.Transporter;
 import org.junit.Before;
