@@ -20,7 +20,7 @@ public class Application {
 
         world.addListener(frame);
 
-        frame.addListener(vc);
+        frame.addControlListener(vc);
 
         new Timer(50, mc).start();
     }
