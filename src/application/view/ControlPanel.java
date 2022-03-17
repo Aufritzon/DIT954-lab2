@@ -46,6 +46,7 @@ public class ControlPanel extends JPanel {
         lowerBedButton = new JButton("Lower Lift Bed");
         startButton = new JButton("Start Engine");
         startButton.setBackground(Color.GREEN);
+
         stopButton = new JButton("Stop Engine");
         stopButton.setBackground(Color.RED);
         gasSpinner = new JSpinner();

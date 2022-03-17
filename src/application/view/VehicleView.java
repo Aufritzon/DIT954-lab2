@@ -58,10 +58,6 @@ public class VehicleView extends JFrame implements WorldListener{
 
     }
 
-    public DrawPanel getDrawPanel() {
-        return drawPanel;
-    }
-
     public void addControlListener(ViewListener listener) {
         controlPanel.addListener(listener);
     }

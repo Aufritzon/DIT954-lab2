@@ -2,79 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/model/VehicleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/model/Vehicles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/model/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/AbstractMovable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/AbstractMovable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/Car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/CarMovable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/Movable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Base/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Base/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/Saab95.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/Volvo240.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Model/Cars/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Model/Cars/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Movable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Saab95.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/Volvo240.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/jdoc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/MovementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/MovementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/VehicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/VehicleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/VehicleModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/HelperMethods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/Movable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/IVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/IVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Scania.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/TrailerTruck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/TrailerTruck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Vehicle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Vehicle$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/vehicles/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/world/VehicleFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/world/Vehicles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/world/World.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/model/world/WorldListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/AddRemovePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/ControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/ControlPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/GasPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/IPositionable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/VehicleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/VehicleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/view/ViewListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controller/MovementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/MovementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controller/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controller/VehicleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/VehicleModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/HelperMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/utilities/HelperMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/IVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/IVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/TrailerTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/TrailerTruck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/TrailerVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/TrailerVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/Transporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/TurboVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/TurboVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/vehicles/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/world/VehicleFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/world/Vehicles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/world/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/model/world/WorldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/WorldListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/AddRemovePanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/ControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/IPositionable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/model/vehicles/IPositionable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/view/VehicleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/VehicleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/ViewListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controller/ViewListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +136,7 @@
       <workItem from="1646898442877" duration="32342000" />
       <workItem from="1646985116060" duration="11987000" />
       <workItem from="1647247725019" duration="13801000" />
-      <workItem from="1647333936711" duration="56308000" />
+      <workItem from="1647333936711" duration="56851000" />
     </task>
     <servers />
   </component>
