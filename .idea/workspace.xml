@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/MovementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT954-lab2/application/controller/MovementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/ControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/view/VehicleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/view/VehicleView.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0b7eaf9-1357-4fd1-a5f5-e5e584308135" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +132,7 @@
       <workItem from="1646898442877" duration="32342000" />
       <workItem from="1646985116060" duration="11987000" />
       <workItem from="1647247725019" duration="13801000" />
-      <workItem from="1647333936711" duration="56851000" />
+      <workItem from="1647333936711" duration="57369000" />
     </task>
     <servers />
   </component>
