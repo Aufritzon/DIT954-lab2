@@ -1,10 +1,11 @@
 package application.view;
 
-import application.model.world.WorldListener;
+import application.controller.ViewListener;
+import application.model.WorldListener;
+import application.model.vehicles.IPositionable;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,12 +16,12 @@ import java.util.List;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class VehicleView extends JFrame implements WorldListener {
+public class VehicleView extends JFrame implements WorldListener{
     private static final int X = 800;
     private static final int Y = 800;
 
-    DrawPanel drawPanel;
-    ControlPanel controlPanel;
+    private DrawPanel drawPanel;
+    private ControlPanel controlPanel;
 
     // Constructor
     public VehicleView(String framename) {
@@ -57,12 +58,20 @@ public class VehicleView extends JFrame implements WorldListener {
 
     }
 
-    @Override
-    public void actOnWorldChange(List<IPositionable> positionables) {
-        drawPanel.actOnWorldChange(positionables);
+    public DrawPanel getDrawPanel() {
+        return drawPanel;
     }
 
     public void addControlListener(ViewListener listener) {
         controlPanel.addListener(listener);
+    }
+
+    public void removeControlListener(ViewListener listener) {
+        controlPanel.removeListener(listener);
+    }
+
+    @Override
+    public void actOnWorldChange(List<IPositionable> positionables) {
+        drawPanel.actOnWorldChange(positionables);
     }
 }

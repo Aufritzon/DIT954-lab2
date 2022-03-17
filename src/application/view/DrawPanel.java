@@ -1,6 +1,6 @@
 package application.view;
 
-import application.model.world.WorldListener;
+import application.model.vehicles.IPositionable;
 
 import javax.swing.*;
 import java.awt.*;

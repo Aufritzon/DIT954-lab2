@@ -1,7 +1,5 @@
 package application.model.vehicles;
 
-import application.model.Movable;
-
 public interface IVehicle extends Movable {
     void gas(double amount);
 
@@ -10,8 +8,6 @@ public interface IVehicle extends Movable {
     void startEngine();
 
     void stopEngine();
-
-    double getCurrentSpeed();
 
     void invertDirection();
 }

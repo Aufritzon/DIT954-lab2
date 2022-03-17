@@ -1,6 +1,6 @@
-package application.model.world;
+package application.model;
 
-import application.view.IPositionable;
+import application.model.vehicles.IPositionable;
 
 import java.util.List;
 

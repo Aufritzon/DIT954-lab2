@@ -1,6 +1,6 @@
 package application.model.vehicles;
 
-import application.model.HelperMethods;
+import application.model.utilities.HelperMethods;
 
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package application.controller;
+package application.model;
 
 public interface VehicleModel {
 
@@ -23,5 +23,6 @@ public interface VehicleModel {
     void addVehicle();
 
     void removeVehicle();
+
 
 }

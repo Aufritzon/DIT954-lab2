@@ -1,14 +1,10 @@
-package application.view;
-
-import application.model.Position;
+package application.model.vehicles;
 
 import java.awt.image.BufferedImage;
 
 public interface IPositionable {
 
     BufferedImage getImage();
-
-    Position getPosition();
 
     double getX();
 

@@ -61,8 +61,8 @@ public class Transporter extends TrailerTruck {
     public void loadCar(Car car) {
         if (isRoomOnTrailer() && !isTrailerRaised && isCarCloseEnough(car) && !isCarTooBig(car)) {
             load.push(car);
-            car.setX(getX());
-            car.setY(getY());
+            car.setX(this.getX());
+            car.setY(this.getY());
         }
     }
 

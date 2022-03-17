@@ -24,6 +24,7 @@ public abstract class TrailerTruck extends Vehicle implements TrailerVehicle {
      *
      * @param amount
      */
+
     @Override
     public void incrementSpeed(double amount) {
         setSafeSpeed(getCurrentSpeed() + amount);

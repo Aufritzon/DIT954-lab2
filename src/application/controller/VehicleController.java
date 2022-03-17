@@ -1,6 +1,7 @@
 package application.controller;
 
-import application.view.ViewListener;
+import application.model.VehicleModel;
+import application.model.World;
 
 public class VehicleController implements ViewListener {
 
@@ -52,12 +53,13 @@ public class VehicleController implements ViewListener {
 
     @Override
     public void addVehiclePerformed() {
+        world.addVehicle();
 
     }
 
     @Override
     public void removeVehiclePerformed() {
-
+        world.removeVehicle();
     }
 
 }

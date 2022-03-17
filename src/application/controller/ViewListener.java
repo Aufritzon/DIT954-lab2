@@ -1,4 +1,4 @@
-package application.view;
+package application.controller;
 
 public interface ViewListener {
 

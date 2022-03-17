@@ -2,7 +2,7 @@ package application;
 
 import application.controller.MovementController;
 import application.controller.VehicleController;
-import application.model.world.World;
+import application.model.World;
 import application.view.VehicleView;
 
 import javax.swing.*;
