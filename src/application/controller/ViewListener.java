@@ -18,8 +18,4 @@ public interface ViewListener {
 
     void lowerBedPerformed();
 
-    void addVehiclePerformed();
-
-    void removeVehiclePerformed();
-
 }

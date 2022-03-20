@@ -29,6 +29,10 @@ public class Vehicles {
         this.add(createVehicle(VehicleType.SCANIA,0, 200, Direction.EAST));
     }
 
+    public int getSize() {
+        return vehicles.size();
+    }
+
     private void add(IVehicle vehicle) {
         vehicles.add(vehicle);
     }

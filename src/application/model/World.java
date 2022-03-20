@@ -18,6 +18,11 @@ public class World implements VehicleModel {
     }
 
     @Override
+    public Vehicles getVehicles() {
+        return vehicles;
+    }
+
+    @Override
     public void stopVehicles() {
         vehicles.stopEngine();
     }
@@ -54,16 +59,6 @@ public class World implements VehicleModel {
     @Override
     public void turnOffTurbos() {
         vehicles.turboOff();
-    }
-
-    @Override
-    public void addVehicle() {
-        vehicles.add();
-    }
-
-    @Override
-    public void removeVehicle() {
-        vehicles.remove();
     }
 
     public void addListener(WorldListener listener) {

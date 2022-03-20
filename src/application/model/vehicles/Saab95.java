@@ -8,29 +8,27 @@ import java.awt.*;
  */
 public class Saab95 extends Car implements TurboVehicle {
 
-    private boolean turboOn;
+    private final ITurboState turboState;
 
     public Saab95(double x, double y, Direction dir) {
         super(x, y, dir, 0, 4, Color.RED, "Saab95", 125, 2);
-        this.turboOn = false;
+        this.turboState = new SaabTurboState();
         setImage("Saab95.jpg");
     }
 
     @Override
     public void setTurboOn() {
-        turboOn = true;
+        turboState.on();
     }
 
     @Override
     public void setTurboOff() {
-        turboOn = false;
+        turboState.off();
     }
 
     @Override
     public double speedFactor() {
-        double val = 1;
-        if (turboOn) val = 1.3;
-        return getEnginePower() * 0.01 * val;
+        return getEnginePower() * 0.01 * turboState.getFactor();
     }
 
 }

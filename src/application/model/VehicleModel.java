@@ -20,9 +20,7 @@ public interface VehicleModel {
 
     void turnOffTurbos();
 
-    void addVehicle();
-
-    void removeVehicle();
+    Vehicles getVehicles();
 
 
 }

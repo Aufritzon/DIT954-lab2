@@ -32,14 +32,14 @@ public class VehicleView extends JFrame implements WorldListener{
     // Sets everything in place and fits everything
     private void initComponents() {
         drawPanel = new DrawPanel(X,Y - 240);
-        controlPanel = new ControlPanel(X, 240);
+        controlPanel = new ControlPanel(X , 240);
         this.add(drawPanel);
         this.add(controlPanel);
     }
 
     private void initFrame(String title) {
         this.setTitle(title);
-        this.getContentPane().setPreferredSize(new Dimension(X,Y));
+        this.getContentPane().setPreferredSize(new Dimension(X ,Y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
 
         this.pack();
@@ -56,6 +56,11 @@ public class VehicleView extends JFrame implements WorldListener{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
 
+    }
+
+    public void addControls(JPanel panel) {
+        controlPanel.add(panel);
+        this.pack();
     }
 
     public void addControlListener(ViewListener listener) {

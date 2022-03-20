@@ -51,15 +51,4 @@ public class VehicleController implements ViewListener {
         world.lowerBeds();
     }
 
-    @Override
-    public void addVehiclePerformed() {
-        world.addVehicle();
-
-    }
-
-    @Override
-    public void removeVehiclePerformed() {
-        world.removeVehicle();
-    }
-
 }

@@ -21,13 +21,11 @@ public class ControlPanel extends JPanel {
     private JButton lowerBedButton;
     private JButton startButton;
     private JButton stopButton;
-    private JButton addButton;
-    private JButton removeButton;
     private final int width;
     private final int height;
 
     public ControlPanel(int width, int height) {
-        this.setPreferredSize(new Dimension(width, height));
+        this.setSize(new Dimension(width, height));
         this.width = width;
         this.height = height;
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
@@ -45,31 +43,28 @@ public class ControlPanel extends JPanel {
         liftBedButton = new JButton("Scania Lift Bed");
         lowerBedButton = new JButton("Lower Lift Bed");
         startButton = new JButton("Start Engine");
-        startButton.setBackground(Color.GREEN);
-
+        startButton.setBackground(Color.blue);
+        startButton.setForeground(Color.green);
         stopButton = new JButton("Stop Engine");
-        stopButton.setBackground(Color.RED);
+        stopButton.setBackground(Color.red);
+        stopButton.setForeground(Color.black);
         gasSpinner = new JSpinner();
-        addButton = new JButton("Add vehicle");
-        removeButton = new JButton("Remove vehicle");
 
         gasSpinner.setModel(new SpinnerNumberModel(0, 0, 100, 1));
         gasPanel.setLayout(new BorderLayout());
         gasPanel.add(new JLabel("Amount of Gas"), BorderLayout.PAGE_START);
         gasPanel.add(gasSpinner, BorderLayout.PAGE_END);
 
-        buttonPanel.setLayout(new GridLayout(2, 7));
-        buttonPanel.setPreferredSize(new Dimension(width - gasPanel.getPreferredSize().width, height));
+        buttonPanel.setLayout(new GridLayout(2, 5));
+        buttonPanel.setPreferredSize(new Dimension(width - gasPanel.getPreferredSize().width - 200, height));
         buttonPanel.add(gasButton, 0);
         buttonPanel.add(turboOnButton, 1);
         buttonPanel.add(liftBedButton, 2);
         buttonPanel.add(startButton, 3);
-        buttonPanel.add(addButton, 4);
-        buttonPanel.add(brakeButton, 5);
-        buttonPanel.add(turboOffButton, 6);
-        buttonPanel.add(lowerBedButton, 7);
-        buttonPanel.add(stopButton, 8);
-        buttonPanel.add(removeButton,9);
+        buttonPanel.add(brakeButton, 4);
+        buttonPanel.add(turboOffButton, 5);
+        buttonPanel.add(lowerBedButton, 6);
+        buttonPanel.add(stopButton, 7);
 
         this.add(gasPanel);
         this.add(buttonPanel);
@@ -83,8 +78,6 @@ public class ControlPanel extends JPanel {
         lowerBedButton.addActionListener(e -> engageListeners(ViewListener::lowerBedPerformed));
         startButton.addActionListener(e -> engageListeners(ViewListener::startPerformed));
         stopButton.addActionListener(e -> engageListeners(ViewListener::stopPerformed));
-        addButton.addActionListener(e -> engageListeners(ViewListener::addVehiclePerformed));
-        removeButton.addActionListener(e -> engageListeners(ViewListener::removeVehiclePerformed));
         gasButton.addActionListener(e -> listeners.forEach(l -> l.gasPerformed(gasAmount)));
         brakeButton.addActionListener(e -> listeners.forEach(l -> l.brakePerformed(gasAmount)));
     }
